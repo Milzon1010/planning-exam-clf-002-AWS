@@ -1,49 +1,48 @@
 📦 AWS Storage Services (Detailed Summary)
 1. Amazon S3 (Simple Storage Service)
 Type: Object Storage
-
 Use Cases: Backup, archival, web hosting, data lakes, static website hosting.
-
 Key Features:
-
-Stores objects (files) in buckets.
-Supports versioning and lifecycle rules (auto move/delete).
-S3 Standard, S3 Intelligent-Tiering, S3 Glacier (for archival).
-Durable (11 nines - 99.999999999%) and highly available.
-Access control via IAM, bucket policies, and ACLs.
-Event notification (e.g., trigger Lambda when a file is uploaded).
+  Stores objects (files) in buckets.
+  Supports versioning and lifecycle rules (auto move/delete).
+  S3 Standard, S3 Intelligent-Tiering, S3 Glacier (for archival).
+  Durable (11 nines - 99.999999999%) and highly available.
+  Access control via IAM, bucket policies, and ACLs.
+  Event notification (e.g., trigger Lambda when a file is uploaded).
 
 2. Amazon EBS (Elastic Block Store)
-Type: Block Storage
-Use Cases: Persistent storage for EC2 instances (like a hard disk).
-Key Features: Volume attached to one EC2 instance at a time.
-Supports SSD (gp3, io2) and HDD (st1, sc1) types.
-Snapshots to Amazon S3 for backups.
-Can be encrypted for security.
+  Type: Block Storage
+  Use Cases: Persistent storage for EC2 instances (like a hard disk).
+  Key Features: Volume attached to one EC2 instance at a time.
+  Supports SSD (gp3, io2) and HDD (st1, sc1) types.
+  Snapshots to Amazon S3 for backups.
+  Can be encrypted for security.
 
 3. Amazon EFS (Elastic File System)
-Type: File Storage
-Use Cases: Shared file systems for multiple EC2 instances (Linux only).
-Key Features: NFS protocol.
-
-Scales automatically as you add/remove files.
-Regional storage, highly available across AZs.
-Supports lifecycle management to move infrequently used files to lower-cost storage.
+  Type: File Storage
+  Use Cases: Shared file systems for multiple EC2 instances (Linux only).
+  Key Features: NFS protocol.
+  
+  Scales automatically as you add/remove files.
+  Regional storage, highly available across AZs.
+  Supports lifecycle management to move infrequently used files to lower-cost storage.
 
 4. Amazon FSx
-Type: File Storage (Fully managed file systems)
-Variants & Use Cases:
-FSx for Windows File Server: Windows-based applications needing SMB protocol.
-FSx for Lustre: High-performance computing, machine learning, big data.
+  Type: File Storage (Fully managed file systems)
+  Variants & Use Cases:
+  FSx for Windows File Server: Windows-based applications needing SMB protocol.
+  FSx for Lustre: High-performance computing, machine learning, big data.
 
 5. Amazon S3 Glacier & Glacier Deep Archive
-Type: Archive Storage
-Use Cases: Long-term data archiving, compliance.
-Key Features: Much cheaper than S3 Standard.
-Retrieval time options: Expedited (1–5 min), Standard (3–5 hrs), Bulk (5–12 hrs).
+  Type: Archive Storage
+  Use Cases: Long-term data archiving, compliance.
+  Key Features: Much cheaper than S3 Standard.
+  Retrieval time options: Expedited (1–5 min), Standard (3–5 hrs), Bulk (5–12 hrs).
 
 6. AWS Storage Gateway
-Type: Hybrid Storage
-Use Cases: Connect on-premises systems with cloud storage.
-Key Features: File Gateway, Tape Gateway, Volume Gateway.
-Helps in migrating data from data centers to AWS.
+  Type: Hybrid Storage
+  Use Cases: Connect on-premises systems with cloud storage.
+  Key Features: File Gateway, Tape Gateway, Volume Gateway.
+  Helps in migrating data from data centers to AWS.
+
+
