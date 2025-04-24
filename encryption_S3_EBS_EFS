@@ -37,3 +37,8 @@ Managed via AWS KMS, using customer-managed or AWS-managed keys.
 Uses TLS (Transport Layer Security).
 
 Needs to be enabled manually when mounting EFS on EC2 using the -o tls option.
+
+🎯 Summary
+S3: Most flexible; supports multiple encryption types and is great for data lakes, logs, etc.
+EBS: Volume-level encryption, ideal for secure OS or DB storage.
+EFS: File system-wide encryption, good for shared access with compliance needs.
