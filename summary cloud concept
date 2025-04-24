@@ -1,0 +1,45 @@
+AWS Certified Cloud Practitioner: Cloud Concepts Summary
+
+1. What is Cloud Computing?
+Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing. It allows businesses to access technology services without owning physical infrastructure.
+
+2. Benefits of Cloud Computing
+
+Elasticity: Automatically scale resources up or down.
+Cost-Effective: Pay only for what you use.
+Agility: Faster deployment and experimentation.
+Global Reach: Deploy applications in multiple AWS Regions.
+High Availability: Designed for fault-tolerance and redundancy.
+Security: Backed by AWS global infrastructure and services.
+
+3. Types of Cloud Deployment Models
+
+Public Cloud: Resources are owned and operated by a third-party provider (e.g., AWS).
+Private Cloud: Resources used exclusively by one organization, hosted either on-premises or by a third party.
+Hybrid Cloud: Combination of on-premises infrastructure with cloud services.
+
+4. Types of Cloud Service Models
+
+IaaS (Infrastructure as a Service): Basic building blocks like compute, storage, and networking (e.g., EC2, S3).
+PaaS (Platform as a Service): Tools for developers to build applications without managing infrastructure (e.g., Elastic Beanstalk).
+SaaS (Software as a Service): Software delivered over the Internet (e.g., AWS WorkMail, Salesforce).
+
+5. Cloud Economics
+
+Pay-as-you-go: Pay only for resources consumed.
+No upfront investment: No need to purchase hardware.
+Variable vs Fixed Costs: Convert capital expenditure to operational expenditure.
+
+6. AWS Cloud Design Principles
+
+Design for failure
+Implement elasticity
+Think parallel
+Automate to make architectural experimentation easier
+
+7. Shared Responsibility Model
+
+AWS is responsible for security OF the cloud (hardware, software, networking).
+Customer is responsible for security IN the cloud (data, applications, IAM policies).
+This summary provides a foundational overview of Cloud Concepts for the AWS CCP exam. Use this to revise key principles and terminology.
+
