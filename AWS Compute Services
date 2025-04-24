@@ -1,0 +1,53 @@
+AWS Compute Services:
+
+Amazon EC2 (Elastic Compute Cloud)
+
+Description: Amazon EC2 provides scalable virtual machines (VMs) for hosting applications. You can choose the size, operating system, and network configuration.
+Use Cases: Web hosting, batch processing, enterprise applications, and development environments.
+Key Features:
+Instance Types: Different instance types tailored for compute, memory, or storage-intensive workloads.
+Auto Scaling: Automatically scale your EC2 instances based on demand.
+Elastic Load Balancer (ELB): Distribute incoming traffic across multiple EC2 instances for improved fault tolerance.
+
+AWS Lambda
+
+Description: AWS Lambda is a serverless compute service that runs your code in response to events without managing servers.
+Use Cases: Running backend services, handling file uploads, real-time image/video processing, triggering events from other AWS services.
+Key Features:
+Event-driven: Triggers Lambda functions in response to AWS services like S3, DynamoDB, SNS, and more.
+No server management: AWS handles all the infrastructure, scaling, and maintenance.
+Flexible and cost-effective: Pay only for the time your function runs (measured in milliseconds).
+
+Amazon ECS (Elastic Container Service)
+Description: A fully managed container orchestration service that allows you to run Docker containers at scale.
+Use Cases: Running containerized applications without managing the underlying infrastructure.
+Key Features: Task Definitions: Describe how to run Docker containers (which image, how many containers, etc.).
+Service Scaling: Automatically scale containers up or down based on load.
+
+Amazon EKS (Elastic Kubernetes Service)
+Description: Managed Kubernetes service that allows you to run Kubernetes clusters on AWS without needing to install and manage your own control plane.
+Use Cases: Containerized applications that need orchestration and management using Kubernetes.
+Key Features: Fully Managed Kubernetes: AWS takes care of the Kubernetes control plane and infrastructure.
+Auto Scaling: Automatically scale both the Kubernetes cluster and workloads based on demand.
+
+AWS Fargate
+
+Description: A serverless compute engine for containers that works with Amazon ECS and EKS. It allows you to run containers without having to manage the underlying servers or infrastructure.
+Use Cases: Containerized microservices, batch jobs, and scalable applications.
+Key Features: Serverless Containers: No need to provision or manage the underlying compute resources.
+Integrated with ECS and EKS: Works seamlessly with Amazon ECS and EKS for container orchestration.
+
+Amazon Lightsail
+
+Description: An easy-to-use cloud platform that offers compute, storage, and networking capabilities at a lower cost. It’s designed for developers, small businesses, and students who need quick deployment of websites, blogs, and apps.
+Use Cases: Simple web apps, websites, and small business applications.
+Key Features: Pre-configured Templates: Offers one-click apps for common applications like WordPress, Joomla, and more.
+Fixed Pricing: Simple and predictable pricing with monthly cost options.
+
+AWS Batch
+
+Description: Fully managed batch processing service that enables you to run batch jobs at any scale.
+Use Cases: High-performance computing (HPC), simulations, and large-scale data processing jobs.
+Key Features:
+Job Queues: Automatically allocate resources and manage jobs based on priority.
+Integrated with AWS Compute: Runs on EC2 instances or Spot Instances for cost efficiency.
