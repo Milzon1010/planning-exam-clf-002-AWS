@@ -1,0 +1,39 @@
+🧠 AWS CCP Study Schedule (April 24 – May 15)
+Duration: ~3 weeks
+Daily time: 1–2 hours
+Method: 70% concepts + 30% practice questions
+Target Exam Date: May 15
+
+📅 Week 1 (April 24–30) – Cloud Concepts & Security Basics
+
+Day	Focus Area	Activities	Practice
+Wed 24	📘 Cloud Concepts	Benefits, types of cloud models, deployment	5 questions
+Thu 25	📘 Cloud Concepts	Shared Responsibility Model	5 questions
+Fri 26	🔐 Security	IAM, MFA, root user, AWS Organizations	5 questions
+Sat 27	🔐 Security	KMS, WAF, Shield, GuardDuty	5 questions
+Sun 28	🔁 Weekly Quiz	Review key concepts	10 questions
+Mon 29	🔐 Security	Compliance programs, AWS Well-Architected	5 questions
+Tue 30	📘 Cloud + Security Recap	Note highlights and quick quiz	10 questions
+
+📅 Week 2 (May 1–7) – Cloud Technology (Highest Weight)
+
+Day	Focus Area	Activities	Practice
+Wed 1	☁️ AWS Core Services I	EC2, S3, Lambda	5 questions
+Thu 2	☁️ AWS Core Services II	RDS, DynamoDB, CloudFront	5 questions
+Fri 3	☁️ Networking & Logs	VPC, Route 53, CloudWatch, CloudTrail	5 questions
+Sat 4	☁️ Deploy & Scale	Elastic Beanstalk, CloudFormation	5 questions
+Sun 5	🔁 Weekly Quiz	Recap all services and security	10 questions
+Mon 6	☁️ Services Recap	Draw basic diagrams, link services	10 questions
+Tue 7	☁️ + 🔐 Combined	Mixed service + security scenarios	10 questions
+
+📅 Week 3 (May 8–14) – Billing, Support, and Full Practice
+
+Day	Focus Area	Activities	Practice
+Wed 8	💸 Billing & Pricing	Free tier, Cost Explorer, Budgets	5 questions
+Thu 9	💬 Support Plans	Compare Developer, Business, Enterprise plans	5 questions
+Fri 10	🔁 Mixed Review	Random practice from all domains	20 questions
+Sat 11	🧪 Practice Exam 1	Full mock exam (65 questions)	Full Test
+Sun 12	🧠 Review Exam 1	Analyze mistakes, reinforce weak areas	Notes review
+Mon 13	🧪 Practice Exam 2	Second mock exam	Full Test
+Tue 14	🧠 Final Review	Flashcards, tips, confidence boost	Summary notes
+
