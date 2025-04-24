@@ -1,0 +1,41 @@
+🧠 Shared Responsibility Model – Practice Questions (5 total)
+Which of the following is the customer’s responsibility under the Shared Responsibility Model?
+A. Securing the AWS infrastructure
+B. Managing the physical security of AWS data centers
+C. Managing identity and access management (IAM) configurations
+D. Ensuring AWS hardware availability
+
+answer : C
+
+AWS is responsible for security of the cloud. Which of the following does this include?
+A. Configuring firewalls and security settings for your application
+B. Protecting physical servers and network infrastructure
+C. Ensuring that your data is encrypted at rest
+D. Managing the data and user access to your systems
+
+answer : B
+
+Which of the following best describes the customer’s responsibility in AWS?
+A. Ensuring the security of the physical data centers
+B. Monitoring and auditing user activities in AWS
+C. Maintaining AWS hardware and software
+D. Protecting the underlying network and physical layer
+
+answer : B
+
+Under the Shared Responsibility Model, who is responsible for the security of data in an Amazon S3 bucket?
+A. AWS only
+B. The customer only
+C. AWS and the customer together
+D. No one, it's publicly accessible by default
+
+answer : B
+
+Which of the following is an example of AWS’s responsibility in the Shared Responsibility Model?
+A. Installing and patching the operating system on EC2 instances
+B. Managing VPC security group settings
+C. Ensuring the availability of AWS regions and data centers
+D. Defining IAM policies for user access
+
+answer : C
+
