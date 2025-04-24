@@ -1,0 +1,39 @@
+🔐 1. Amazon S3 Encryption
+🔸 At-Rest Encryption Options:
+
+SSE-S3 (Server-Side Encryption with S3 Managed Keys)	
+Description : AWS handles everything (default if enabled). AES-256 encryption.
+
+SSE-KMS (with AWS Key Management Service)	
+Description : You manage access via KMS. Provides audit trail and more control.
+
+SSE-C (Customer-Provided Keys)	
+Description : You provide your own encryption keys (rare use).
+
+Client-Side Encryption	
+Description : : You encrypt data before uploading to S3 using your own app.
+
+🔐 2. Amazon EBS Encryption
+Block-level encryption using AES-256.
+Managed via KMS (AWS Key Management Service).
+Enabled at the volume level — all data in the volume is encrypted, including:
+  Data at rest
+  Snapshots
+  Data in transit between the instance and volume
+Can be enabled by default for all new volumes in a region.
+
+Note: You can’t remove encryption from an existing encrypted EBS volume.
+
+
+🔐 3. Amazon EFS Encryption
+Supports encryption at rest and in transit.
+
+🔸 At Rest:
+Enabled when you create the file system.
+
+Managed via AWS KMS, using customer-managed or AWS-managed keys.
+
+🔸 In Transit:
+Uses TLS (Transport Layer Security).
+
+Needs to be enabled manually when mounting EFS on EC2 using the -o tls option.
