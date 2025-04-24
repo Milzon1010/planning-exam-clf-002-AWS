@@ -1,0 +1,39 @@
+1. Core AWS Services
+a. Compute
+Amazon EC2: Scalable virtual machines for hosting applications.
+AWS Lambda: Serverless compute for running code without servers.
+
+b. Storage
+Amazon S3: Scalable object storage for data.
+Amazon EBS: Block-level storage for EC2 instances.
+Amazon Glacier: Low-cost archive storage.
+
+c. Databases
+Amazon RDS: Managed relational database (supports MySQL, PostgreSQL, etc.).
+Amazon DynamoDB: Managed NoSQL database.
+
+d. Networking
+Amazon VPC: Isolated network to launch AWS resources.
+Amazon Route 53: DNS service for routing internet traffic.
+
+2. AWS Deployment and Management Tools
+AWS CloudFormation: Infrastructure as code for repeatable AWS setups.
+AWS Elastic Beanstalk: PaaS for application deployment.
+Amazon CloudWatch: Monitoring service for AWS resources.
+
+3. AWS Global Infrastructure
+AWS Regions: Geographically separate areas for AWS resources.
+Availability Zones: Isolated data centers within regions for high availability.
+
+4. Security and Identity
+AWS IAM: Manages users, permissions, and roles.
+AWS KMS: Managed service for encryption key management.
+
+5. Monitoring and Logging
+Amazon CloudWatch: Monitoring for AWS resources.
+AWS CloudTrail: Governance and auditing of AWS accounts.
+
+6. Pricing and Billing
+AWS Free Tier: Limited AWS resources for free.
+AWS Cost Explorer: Visualize and analyze spending.
+AWS Budgets: Track usage and cost with custom budgets.
