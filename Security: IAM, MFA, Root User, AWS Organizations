@@ -1,0 +1,94 @@
+🔐 Quick Notes Before the Quiz:
+IAM (Identity and Access Management): Manage users, groups, roles, and permissions.
+
+MFA (Multi-Factor Authentication): Adds an extra security layer (password + device/app/token).
+
+Root User: The original account created; has full access. Must be protected tightly.
+
+AWS Organizations: Manage multiple AWS accounts centrally (control policies, billing, security).
+
+📝 15 Questions
+1. Which AWS identity should you use for everyday operations?
+➡️ A) IAM User
+➡️ B) Root User
+➡️ C) MFA Device
+answer : A
+2. The root user should be used only for daily management tasks.
+➡️ True / False
+answer : True
+3. What is the primary purpose of IAM Roles?
+➡️ A) Grant temporary permissions
+➡️ B) Delete AWS accounts
+➡️ C) Launch EC2 instances
+answer : A
+
+4. You can enable MFA for both the root user and IAM users.
+➡️ True / False
+answer : True
+5. Which service lets you centrally manage multiple AWS accounts?
+➡️ A) IAM
+➡️ B) Control Tower
+➡️ C) AWS Organizations
+answer : C
+6. MFA requires users to present only a username and password.
+➡️ True / False
+answer : False
+7. Which AWS service helps you apply Service Control Policies (SCPs) across accounts?
+➡️ A) IAM
+➡️ B) AWS Organizations
+➡️ C) AWS Config
+answer : A
+8. The root account has full administrative privileges and cannot be restricted.
+➡️ True / False
+answer : False
+9. What is a good security practice for the AWS root user?
+➡️ A) Delete it
+➡️ B) Enable MFA
+➡️ C) Share credentials
+answer : B
+10. IAM Policies are written in which format?
+➡️ A) XML
+➡️ B) JSON
+➡️ C) YAML
+answer : B
+11. IAM Groups are collections of users and cannot have policies attached.
+➡️ True / False
+answer : False
+12. You can assign IAM Roles to which of the following? (Choose two)
+➡️ A) IAM Users
+➡️ B) EC2 Instances
+➡️ C) S3 Buckets
+answer : A & B
+13. AWS Organizations can consolidate billing across accounts.
+➡️ True / False
+answer : False
+14. MFA enhances security by requiring a second factor that only the user possesses.
+➡️ True / False
+answer : True
+15. Can you recover a deleted root user account?
+➡️ A) Yes
+➡️ B) No
+answer : A
+
+
+IAM, MFA, Root User, AWS Organizations – Correction
+
+No.	Question	Your Answer	Correct Answer	Notes
+1	Identity for daily ops?	A ✅	A ✅	✅ Correct — Use IAM User.
+2	Root user for daily tasks?	True ❌	False	❗ Root user should NOT be used daily, only for critical tasks.
+3	Primary purpose of IAM Roles?	A ✅	A ✅	✅ Correct.
+4	Enable MFA for root + IAM users?	True ✅	True ✅	✅ Correct.
+5	Manage multiple accounts?	C ✅	C ✅	✅ Correct — AWS Organizations.
+6	MFA only username + password?	False ✅	False ✅	✅ Correct — MFA = Password + second factor (device/code).
+7	SCPs across accounts?	A ❌	B (AWS Organizations)	❗ SCPs are handled by AWS Organizations, not IAM.
+8	Root account has full privileges?	False ❌	True	❗ Root account has full privileges and cannot be restricted.
+9	Good root user practice?	B ✅	B ✅	✅ Correct — Enable MFA.
+10	IAM policies written in?	B ✅	B ✅	✅ Correct — JSON.
+11	IAM Groups have policies?	False ✅	False ✅	✅ Correct.
+12	IAM roles can be assigned to?	A & B ✅	A & B ✅	✅ Correct — IAM Users and EC2 Instances.
+13	Organizations consolidate billing?	False ❌	True	❗ AWS Organizations can consolidate billing across accounts.
+14	MFA = second factor security?	True ✅	True ✅	✅ Correct.
+15	Recover deleted root account?	A ❌	B (No)	❗ Root account cannot be deleted or recovered — it always exists.
+
+
+
