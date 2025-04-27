@@ -1,0 +1,55 @@
+🌩️ Cloud + Security Recap Highlights
+☁️ Cloud Basics
+Cloud Computing: On-demand delivery of IT resources over the Internet.
+
+AWS Global Infrastructure: Region → Availability Zone → Edge Location.
+
+Shared Responsibility Model:
+
+AWS: "Security of the cloud" (hardware, software, networking, facilities).
+
+Customer: "Security in the cloud" (data, config, apps, user access).
+
+🔒 Security Concepts
+IAM (Identity and Access Management): Manage users, roles, and permissions securely.
+
+IAM Best Practices:
+
+Use MFA (Multi-Factor Authentication).
+
+Grant least privilege access (only what is necessary).
+
+Use IAM roles for services, not IAM users.
+
+Encryption Types:
+
+At rest (S3, EBS, RDS).
+
+In transit (SSL/TLS).
+
+KMS (Key Management Service): Create and manage encryption keys easily.
+
+Secrets Manager: Store and rotate database credentials, API keys, and secrets.
+
+AWS Shield:
+
+Shield Standard: Auto DDoS protection (free).
+
+Shield Advanced: Paid, for enhanced protection.
+
+AWS WAF (Web Application Firewall): Protect apps from SQL injection, XSS attacks, etc.
+
+AWS Config: Track configuration changes for compliance.
+
+AWS CloudTrail: Log API calls and user actions for auditing.
+
+🛡️ Security Tools Overview
+
+Tool	Purpose
+IAM	Access control
+KMS	Encryption management
+Shield	DDoS protection
+WAF	Web traffic filtering
+GuardDuty	Threat detection
+Config	Resource compliance tracking
+CloudTrail	API activity logging
