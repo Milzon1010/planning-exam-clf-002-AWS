@@ -91,4 +91,11 @@ No.	Question	Your Answer	Correct Answer	Notes
 15	Recover deleted root account?	A ❌	B (No)	❗ Root account cannot be deleted or recovered — it always exists.
 
 
+🔥 Corrections Summary
 
+Wrong	Correct Info
+Q2	Root user = NOT for daily tasks (only emergency/initial setup).
+Q7	SCPs managed by AWS Organizations, not IAM.
+Q8	Root account has full privileges and cannot be restricted.
+Q13	AWS Organizations do consolidate billing.
+Q15	Root account cannot be deleted — it always exists.
