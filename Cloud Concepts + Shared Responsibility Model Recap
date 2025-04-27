@@ -1,0 +1,30 @@
+Cloud Concepts Quick Notes
+Cloud Computing: On-demand delivery of compute, storage, and other IT resources via the Internet.
+
+Benefits: Agility, Elasticity, Scalability, Cost Savings, Global Reach.
+
+Types of Cloud Deployment:
+
+Public Cloud: AWS manages everything (most common).
+Private Cloud: Dedicated resources for one customer.
+Hybrid Cloud: Mix of on-premises + cloud.
+Cloud Service Models:
+
+IaaS: Infrastructure as a Service (e.g., EC2, S3).
+PaaS: Platform as a Service (e.g., Elastic Beanstalk).
+SaaS: Software as a Service (e.g., Gmail, Salesforce).
+
+Shared Responsibility Model Quick Notes
+AWS Responsibility ("Security of the Cloud")
+→ Protect hardware, software, networking, and cloud infrastructure.
+
+Customer Responsibility ("Security in the Cloud")
+→ Manage your data, user access, app security, network configs.
+
+
+Area	Responsibility
+Physical hardware security	AWS
+VPC configuration, security groups	Customer
+Data encryption settings	Customer
+Patching OS on EC2 instances	Customer
+Patch management of managed services (e.g., RDS infra)	AWS
