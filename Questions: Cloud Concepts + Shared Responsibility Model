@@ -1,0 +1,77 @@
+📝 15 Questions: Cloud Concepts + Shared Responsibility Model
+
+1. AWS is responsible for patching the operating system on EC2 instances.
+➡️ True / False
+answer : False
+2. In a public cloud model, the cloud provider owns and manages the infrastructure.
+➡️ True / False
+answer : False
+3. Which of these is a Platform as a Service (PaaS) offering?
+➡️ A) Amazon S3
+➡️ B) AWS Elastic Beanstalk
+➡️ C) Amazon EC2
+➡️ D) Amazon VPC
+answer : B
+4. Who is responsible for configuring network security groups in AWS?
+➡️ A) AWS
+➡️ B) Customer
+➡️ C) Both
+answer : B
+
+5. In the Shared Responsibility Model, AWS manages data classification.
+➡️ True / False
+answer : False
+
+6. Which cloud model uses a combination of private infrastructure and public cloud?
+➡️ A) Public Cloud
+➡️ B) Private Cloud
+➡️ C) Hybrid Cloud
+➡️ D) Community Cloud
+answer : C
+7. IaaS provides ready-to-use software applications over the internet.
+➡️ True / False
+answer : False
+8. Customers must encrypt their own data if required.
+➡️ True / False
+answer : True
+
+9. Which service type gives customers the most control over the operating system?
+➡️ A) IaaS
+➡️ B) PaaS
+➡️ C) SaaS
+answer : A
+10. AWS is responsible for securing the physical data centers.
+➡️ True / False
+answer : True
+11. Which deployment model allows customers full control of their environment?
+➡️ A) Public Cloud
+➡️ B) Private Cloud
+➡️ C) Hybrid Cloud
+answer : B
+12. In SaaS, customers control the application’s underlying infrastructure.
+➡️ True / False
+answer : True
+13. The elasticity of cloud computing allows you to increase or decrease resources based on demand.
+➡️ True / False
+answer : True
+14. Who manages the firewall rules applied to an EC2 instance?
+➡️ A) AWS
+➡️ B) Customer
+➡️ C) Both
+answer : B
+15. AWS Config automatically encrypts your data without your action.
+➡️ True / False
+answer : False
+
+
+🚨 Quick Correction Summary:
+
+Error	Correction
+Q2	Public cloud means AWS owns and manages infrastructure (True).
+Q12	SaaS means customer only uses the app, not control infra (False).
+✅ Tip:
+
+Public Cloud: AWS owns servers, storage, network — you rent it.
+
+SaaS: Example Gmail — you use it, but don’t manage its servers or storage.
+
