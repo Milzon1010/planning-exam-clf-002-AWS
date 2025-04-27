@@ -1,0 +1,39 @@
+📚 Quick Fix: Cloud + Security Mistakes
+1. GuardDuty vs WAF
+GuardDuty:
+→ Detects suspicious activities (like unusual API calls, unauthorized access attempts).
+
+WAF (Web Application Firewall):
+→ Blocks attacks on web apps (SQL injection, XSS).
+✅ Remember: GuardDuty = Detection, WAF = Protection for websites.
+
+2. Encryption in Transit vs At Rest
+Encryption in Transit:
+→ Protects data while moving across networks (e.g., HTTPS, SSL/TLS).
+
+Encryption at Rest:
+→ Protects data stored on disk (e.g., S3, EBS volumes). ✅ Remember: Transit = Moving, Rest = Stored.
+
+3. Shared Responsibility - Patch Management
+Customer Responsibility:
+→ You must update/patch your operating systems, applications, databases (like Windows updates, Linux patches).
+
+AWS Responsibility:
+→ AWS patches hardware, managed services (like RDS underlying infra). ✅ Remember: You patch your stuff, AWS patches their cloud.
+
+4. IAM Permissions - Admin by Default?
+Never give IAM users full admin access by default.
+
+Always apply Principle of Least Privilege → only give necessary permissions. ✅ Remember: Smallest necessary access always!
+
+5. Edge Locations - Main Purpose
+Edge Locations (CloudFront) are for content delivery and caching (e.g., faster website access globally).
+
+Not for storing backups! ✅ Remember: Edge = Speed, not Backup.
+
+🔥 10-Second Memory Hooks:
+GuardDuty = Guard your account from threats
+Transit = Travel = Data moving
+Patch = Customer's Job
+Least Privilege = Safer Users
+Edge = Fast delivery, not storage
