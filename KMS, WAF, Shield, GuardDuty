@@ -1,0 +1,110 @@
+🔥 Quick Recap:
+Security Services Overview
+
+
+Service	Purpose	Notes
+KMS (Key Management Service)	Manage encryption keys.	Encrypt data at rest and in transit. Integrates with many AWS services.
+WAF (Web Application Firewall)	Protect web apps from attacks like SQL Injection and XSS.	Works with CloudFront or ALB.
+Shield	Protect against DDoS attacks.	Basic is free, Advanced has more features (costs extra).
+GuardDuty	Threat detection service (detects suspicious activities).	No agents to install; uses AWS data sources like VPC Flow Logs.
+
+📝 15 Questions: KMS, WAF, Shield, GuardDuty
+What does AWS KMS primarily manage?
+➡️ A) Databases
+➡️ B) Encryption Keys
+➡️ C) Virtual Servers
+Answer: B
+
+AWS WAF can help protect applications from SQL injection attacks.
+➡️ True / False
+Answer: True
+
+Which service protects against Distributed Denial of Service (DDoS) attacks?
+➡️ A) GuardDuty
+➡️ B) Shield
+➡️ C) WAF
+Answer: B
+
+GuardDuty requires installing software agents on EC2 instances.
+➡️ True / False
+Answer: False
+
+Which service is primarily used for centralized key management?
+➡️ A) IAM
+➡️ B) KMS
+➡️ C) GuardDuty
+Answer: B
+
+AWS WAF operates at which OSI layers? (Choose two)
+➡️ A) Layer 4 (Transport)
+➡️ B) Layer 7 (Application)
+➡️ C) Layer 3 (Network)
+Answer: A & B
+
+Shield Advanced provides additional protections over Shield Standard.
+➡️ True / False
+Answer: True
+
+What kind of threats does GuardDuty detect?
+➡️ A) SQL Injection
+➡️ B) Stolen credentials, anomalous API calls, malware
+➡️ C) Hardware failure
+Answer: B
+
+Can KMS integrate with S3 to encrypt stored objects?
+➡️ Yes / No
+Answer: Yes
+
+AWS Shield Standard protects against large-scale network and transport layer DDoS attacks automatically for free.
+➡️ True / False
+Answer: True
+
+Which AWS service allows you to create custom rules to allow or block HTTP requests?
+➡️ A) GuardDuty
+➡️ B) Shield
+➡️ C) WAF
+Answer: C
+
+GuardDuty analyzes VPC Flow Logs, DNS Logs, and CloudTrail events.
+➡️ True / False
+Answer: True
+
+Is Shield Advanced free for all AWS customers?
+➡️ Yes / No
+Answer: No
+
+KMS automatically rotates keys every 365 days if enabled.
+➡️ True / False
+Answer: True
+
+AWS WAF rules are applied at the edge locations when using CloudFront.
+➡️ True / False
+Answer: True
+
+
+
+MS vs WAF vs Shield vs GuardDuty
+memory map
+                +------------------+
+                |    Security       |
+                +------------------+
+                        |
+    +---------+---------+---------+---------+
+    |         |                   |         |
+  (KMS)     (WAF)              (Shield)   (GuardDuty)
+   🔑         🛡️                 🛡️          👀
+Key Mgmt   Web App Firewall    DDoS Defense Threat Detection
+Encrypt    Protects HTTP/HTTPS Auto Protection   Suspicious Behavior
+data at rest   (SQLi, XSS)      (L3 & L4 layers) (VPC Flow Logs, API Calls)
++ S3, EBS   + CloudFront/ALB    Basic=Free       No agents to install
++ RDS       + Custom Rules      Advanced=$$$     Machine Learning-based
+
+🎯 Quick Tricks to Remember:
+
+If you think about...	You remember...
+🔑 Encryption, S3, databases	KMS
+🛡️ Protecting websites, HTTP rules	WAF
+🛡️ Protecting against DDoS attacks	Shield
+👀 Finding hackers inside AWS accounts	GuardDuty
+
+
