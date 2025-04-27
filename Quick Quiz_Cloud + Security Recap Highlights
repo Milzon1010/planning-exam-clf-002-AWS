@@ -1,0 +1,61 @@
+1. In the AWS Shared Responsibility Model, AWS manages data encryption settings.
+➡️ True / False
+Answer : Fals
+2. IAM Roles are better than IAM Users for granting access to AWS services.
+➡️ True / False
+Answer : True
+3. Which AWS service helps detect suspicious activities automatically?
+➡️ A) WAF
+➡️ B) GuardDuty
+➡️ C) CloudTrail
+➡️ D) Shield
+Answer : B
+4. MFA stands for Multi-Factor Authentication.
+➡️ True / False
+Answer : True
+5. Which AWS service manages encryption keys?
+➡️ A) Secrets Manager
+➡️ B) KMS
+➡️ C) IAM
+➡️ D) Config
+Answer :  B
+6. Encryption in transit means encrypting data when it is stored on disk.
+➡️ True / False
+Answer : False
+7. AWS WAF is used to block SQL injection and cross-site scripting (XSS).
+➡️ True / False
+Answer : True
+8. Which AWS service logs all API calls across your account?
+➡️ A) CloudTrail
+➡️ B) Shield
+➡️ C) WAF
+➡️ D) KMS
+Answer : A
+
+9. Secrets Manager can automatically rotate database credentials.
+➡️ True / False
+Answer : True
+10. Shield Advanced is a free AWS service.
+➡️ True / False
+Answer : False
+11. AWS Config can alert you when a resource drifts from its expected settings.
+➡️ True / False
+Answer : True
+
+12. Which layer of the Shared Responsibility Model does customer patch management fall under?
+➡️ A) AWS Responsibility
+➡️ B) Customer Responsibility
+Answer : B
+
+13. DDoS attacks are primarily mitigated by AWS WAF.
+➡️ True / False
+Answer : False
+
+14. IAM Users should be given admin permissions by default to save time.
+➡️ True / False
+Answer : False
+15. Edge locations are primarily used for storing backups.
+➡️ True / False
+Answer : False
+
+  
