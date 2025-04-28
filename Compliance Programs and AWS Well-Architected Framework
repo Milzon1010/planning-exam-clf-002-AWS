@@ -1,0 +1,79 @@
+Compliance Programs on AWS
+AWS follows several global compliance standards and frameworks to help ensure that they meet specific legal, regulatory, and industry requirements. As a customer, it’s essential to know which certifications AWS has, so you can trust that your data and applications are secure and meet industry standards.
+
+AWS Artifact: This is the self-service portal where customers can access AWS compliance reports like:
+SOC 1, 2, and 3: Reports that help assess controls related to data security and privacy.
+ISO 27001: Standard for information security management systems.
+PCI DSS: For organizations that handle credit card data.
+HIPAA: For organizations handling healthcare data.
+GDPR: The European Union regulation for personal data protection.
+
+Shared Responsibility Model:
+AWS Responsibilities: Security of the cloud (physical security, network infrastructure, etc.).
+Customer Responsibilities: Security in the cloud (data, IAM, application code, etc.).
+
+AWS Well-Architected Framework
+The AWS Well-Architected Framework provides a set of best practices to help you design and operate reliable, secure, efficient, and cost-effective systems in the cloud. It consists of 6 pillars:
+
+Operational Excellence:
+Focuses on monitoring, automating, and evolving processes to improve operational activities.
+Key practices include continuous improvement, incident response, and automating changes.
+
+Security:
+Protecting data, systems, and applications by implementing robust security measures.
+Key practices include data encryption, identity management, and access control.
+
+Reliability:
+The ability to recover from failures and meet business continuity requirements.
+Key practices include backup, disaster recovery, and fault tolerance.
+
+Performance Efficiency:
+The efficient use of resources to meet application requirements and reduce costs.
+Key practices include choosing the right instance types, auto-scaling, and optimizing performance.
+
+Cost Optimization:
+Ensuring that the architecture is cost-effective and reduces unnecessary expenditures.
+Key practices include monitoring usage, choosing the right pricing models, and scaling resources efficiently.
+
+Sustainability:
+Designing solutions that minimize the environmental impact of your cloud operations.
+Key practices include reducing energy consumption, selecting sustainable services, and optimizing the architecture for lower environmental costs.
+
+Compliance and WAF Questions for You
+Now that you know the basics, let’s move on to 5 questions focused on Compliance Programs and AWS Well-Architected Framework:
+
+1.
+Which AWS service provides access to AWS compliance reports like SOC 2 and ISO 27001?
+A. AWS Artifact
+B. AWS Config
+C. AWS CloudTrail
+D. AWS Shield
+answer : A
+2.
+Which compliance framework helps with credit card data security?
+A. GDPR
+B. HIPAA
+C. PCI DSS
+D. ISO 27001
+answer : C
+3.
+Which AWS service helps you manage user access and control who can access your AWS resources?
+A. IAM
+B. CloudTrail
+C. GuardDuty
+D. AWS Config
+answer : A
+4.
+Which Well-Architected Pillar focuses on automating operations and responding to incidents?
+A. Performance Efficiency
+B. Operational Excellence
+C. Reliability
+D. Sustainability
+answer : B
+5.
+Which of the following is NOT part of the AWS Well-Architected Framework?
+A. Security
+B. Performance Efficiency
+C. Data Integrity
+D. Cost Optimization
+answer : C
