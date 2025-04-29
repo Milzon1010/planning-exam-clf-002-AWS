@@ -1,0 +1,239 @@
+Quick Recap:
+Amazon RDS (Relational Database Service):
+Managed service for relational databases like MySQL, PostgreSQL, SQL Server, and MariaDB.
+Key Features: Automated backups, patching, scaling, and replication for high availability.
+Use Case: Suitable for structured data and applications that require complex queries and ACID compliance.
+
+Amazon DynamoDB:
+Fully managed NoSQL database service.
+Key Features: Low-latency, high-throughput, scalable, and serverless.
+Use Case: Ideal for applications requiring quick lookups and simple queries on key-value or document data models.
+
+Amazon CloudFront:
+Content Delivery Network (CDN) service to deliver content with low latency by caching copies of content at edge locations worldwide.
+Key Features: Can serve static and dynamic content, integrates with other AWS services like S3, EC2, and Lambda.
+Use Case: Best for speeding up delivery of web pages, video streaming, and software downloads.
+
+Question 1:
+Which of the following is a feature of Amazon RDS?
+A. Managed NoSQL database service
+B. Supports complex relational queries and ACID compliance
+C. Offers automatic scaling for NoSQL workloads
+D. Designed for storing large unstructured files
+answer : D
+
+❌ Incorrect. The correct answer is: B. Supports complex relational queries and ACID compliance
+
+✅ Explanation:
+Amazon RDS is a relational database service that supports SQL-based databases like MySQL, PostgreSQL, and SQL Server. It provides ACID compliance and is designed for structured data.
+DynamoDB (not RDS) is the service designed for NoSQL workloads, and S3 (not RDS) is designed for storing unstructured files.
+
+Question 2:
+Which AWS service is best suited for applications that require high-throughput, low-latency access to NoSQL data?
+A. Amazon RDS
+B. Amazon DynamoDB
+C. Amazon Redshift
+D. Amazon CloudFront
+answer : C
+
+❌ Incorrect. The correct answer is: B. Amazon DynamoDB
+
+✅ Explanation:
+Amazon DynamoDB is a NoSQL database that provides high-throughput, low-latency access to data. It's designed for fast, scalable applications that require quick read and write operations on key-value or document data.
+Amazon Redshift is a data warehouse service for running complex queries on large datasets, not specifically for NoSQL use cases.
+
+Question 3:
+Which service can be used to improve the performance and reduce latency of a website by caching content at edge locations globally?
+A. Amazon RDS
+B. Amazon CloudFront
+C. Amazon DynamoDB
+D. Amazon S3
+answer : B
+
+✅ Correct! The answer is B. Amazon CloudFront
+
+✅ Explanation:
+Amazon CloudFront is a Content Delivery Network (CDN) that caches content at edge locations around the world, reducing latency and speeding up content delivery to users.
+RDS is a database service, DynamoDB is a NoSQL database, and S3 is an object storage service, none of which directly address content caching across global edge locations like CloudFront does.
+
+Which of the following is true about Amazon DynamoDB?
+A. It supports relational data models and complex queries.
+B. It is a fully managed NoSQL database service.
+C. It requires you to manage the underlying servers.
+D. It stores data in a block storage format.
+answer : B
+
+✅ Correct! The answer is B. It is a fully managed NoSQL database service.
+
+✅ Explanation:
+Amazon DynamoDB is a fully managed NoSQL database service, designed to handle high-speed, low-latency data access for applications that require large-scale key-value or document storage.
+It doesn't support relational data models or complex SQL queries like RDS, and it doesn't require users to manage servers since it's a fully managed service.
+
+Question 5:
+Which AWS service would you use for a managed relational database with automated backups, patching, and scaling?
+A. Amazon DynamoDB
+B. Amazon RDS
+C. Amazon ElastiCache
+D. Amazon CloudFront
+answer : B
+
+✅ Correct! The answer is B. Amazon RDS
+
+✅ Explanation:
+Amazon RDS (Relational Database Service) is a fully managed relational database service that supports databases like MySQL, PostgreSQL, and SQL Server. It includes features like automated backups, patching, and scaling.
+DynamoDB is for NoSQL workloads, ElastiCache is used for in-memory caching, and CloudFront is for content delivery.
+
+Question 6:
+Which AWS service can be used to automatically scale the throughput of a DynamoDB table based on traffic?
+A. AWS Lambda
+B. DynamoDB Auto Scaling
+C. Amazon RDS Auto Scaling
+D. Elastic Load Balancer
+answer : B
+
+✅ Correct! The answer is B. DynamoDB Auto Scaling
+
+✅ Explanation:
+DynamoDB Auto Scaling automatically adjusts the read and write capacity of a DynamoDB table based on the traffic. This helps maintain performance during varying traffic loads without manual intervention.
+AWS Lambda is for running serverless code, RDS Auto Scaling is for relational databases, and Elastic Load Balancer is used for distributing traffic, not directly related to DynamoDB scaling.
+
+Question 7:
+What is the maximum size of an object that can be stored in Amazon S3?
+A. 5 GB
+B. 5 TB
+C. 50 GB
+D. Unlimited
+answer : B
+
+✅ Correct! The answer is B. 5 TB
+
+✅ Explanation:
+Amazon S3 allows storing objects up to 5 TB in size. Objects larger than 5 GB must be uploaded using the Multipart Upload feature.
+A and C are smaller sizes, and D is incorrect because S3 does have size limits for objects, with 5 TB being the maximum.
+
+Question 8:
+Which of the following AWS services allows you to run code without provisioning or managing servers?
+A. Amazon EC2
+B. AWS Lambda
+C. Amazon RDS
+D. Amazon S3
+answer : B
+
+✅ Correct! The answer is B. AWS Lambda
+
+✅ Explanation:
+AWS Lambda is a serverless compute service, which allows you to run code in response to events without provisioning or managing servers. You pay only for the compute time your code uses.
+Amazon EC2 requires server management, Amazon RDS is a managed database service, and Amazon S3 is an object storage service.
+
+Question 9:
+Which service is best for hosting a dynamic website with a back-end database?
+A. Amazon EC2
+B. Amazon RDS
+C. Amazon S3
+D. Amazon CloudFront
+answer : A
+
+✅ Correct! The answer is A. Amazon EC2
+
+✅ Explanation:
+Amazon EC2 is ideal for hosting dynamic websites that require back-end processing and databases. You have full control over the server to run your web application, connect it to a database, and manage the back-end.
+Amazon RDS is used for relational databases, Amazon S3 is for static content, and Amazon CloudFront is a CDN used for caching static content, not hosting dynamic websites.
+
+Question 10:
+Which of the following is the primary purpose of Amazon ElastiCache?
+A. To store large files in the cloud.
+B. To provide in-memory caching for applications.
+C. To distribute traffic across EC2 instances.
+D. To store backups of databases.
+answer : B
+
+✅ Correct! The answer is B. To provide in-memory caching for applications.
+
+✅ Explanation:
+Amazon ElastiCache is a fully managed in-memory caching service, used to improve the performance of applications by caching frequently accessed data. It supports Redis and Memcached.
+A is incorrect because ElastiCache is not for storing large files.
+C refers to Elastic Load Balancer (ELB), which distributes traffic.
+D is incorrect because Amazon S3 or Amazon RDS snapshots are used for backups.
+
+Question 11:
+Which AWS service allows you to store and retrieve large volumes of archival data at the lowest cost?
+A. Amazon EBS
+B. Amazon Glacier
+C. Amazon RDS
+D. Amazon S3
+answer : B
+
+✅ Correct! The answer is B. Amazon Glacier
+
+✅ Explanation:
+Amazon Glacier is an archival storage service that provides low-cost storage for data that is infrequently accessed. It is ideal for long-term backups and archival purposes.
+Amazon EBS is for block storage attached to EC2 instances, Amazon RDS is a managed relational database service, and Amazon S3 is for object storage but is not specifically designed for archival data like Glacier is.
+
+Question 12:
+Which of the following is a valid use case for Amazon S3 Versioning?
+A. To automatically scale EC2 instances
+B. To track and restore previous versions of uploaded files
+C. To optimize Lambda function performance
+D. To manage data replication between regions
+answer : B
+
+✅ Correct! The answer is B. To track and restore previous versions of uploaded files.
+
+✅ Explanation:
+Amazon S3 Versioning enables you to keep multiple versions of an object in an S3 bucket. This allows you to track and restore previous versions of files if needed.
+A is not related to S3 Versioning; it’s about scaling EC2 instances.
+C is incorrect; versioning does not optimize Lambda performance.
+D refers to cross-region replication, which is different from versioning.
+
+Question 13:
+Which AWS service provides a managed Content Delivery Network (CDN) to deliver content with low latency to users worldwide?
+A. Amazon S3
+B. Amazon CloudFront
+C. Amazon EC2
+D. Amazon Route 53
+answer : B
+
+✅ Correct! The answer is B. Amazon CloudFront
+
+✅ Explanation:
+Amazon CloudFront is a Content Delivery Network (CDN) service that delivers content with low latency to users worldwide. It caches content at edge locations to improve access speed and performance.
+Amazon S3 is for object storage, Amazon EC2 is for running virtual servers, and Amazon Route 53 is a DNS service, not a CDN.
+
+Question 14:
+Which AWS service can be used to automatically scale the number of EC2 instances based on traffic?
+A. Amazon S3
+B. Amazon RDS
+C. AWS Auto Scaling
+D. Amazon CloudWatch
+asnwer : C
+
+✅ Correct! The answer is C. AWS Auto Scaling
+
+✅ Explanation:
+AWS Auto Scaling automatically adjusts the number of EC2 instances in response to traffic changes, ensuring that your application can handle varying loads efficiently.
+Amazon S3 is for object storage, Amazon RDS is for relational databases, and Amazon CloudWatch monitors AWS resources but doesn’t directly scale EC2 instances.
+
+Question 15:
+Which AWS service is used for running containerized applications?
+A. AWS Lambda
+B. Amazon EC2
+C. Amazon ECS
+D. Amazon S3
+answer : C
+
+✅ Correct! The answer is C. Amazon ECS
+
+✅ Explanation:
+Amazon ECS (Elastic Container Service) is a fully managed container orchestration service for running containerized applications at scale. It supports Docker containers and integrates with other AWS services.
+AWS Lambda is for serverless computing, Amazon EC2 is for running virtual servers, and Amazon S3 is for object storage, not container management.
+
+
+
+
+
+
+
+
+
+
+
