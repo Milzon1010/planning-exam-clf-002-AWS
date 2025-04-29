@@ -1,0 +1,686 @@
+Amazon EC2 (Elastic Compute Cloud)
+Virtual Servers in the Cloud: EC2 is a web service for running virtual servers (called instances) in the AWS cloud​
+docs.aws.amazon.com
+​
+docs.aws.amazon.com
+. It lets you set up an operating system and software on a server just like on a physical computer.
+Instance Types: Each EC2 instance type has a fixed combination of CPU, memory, storage, and network resources​
+aws.amazon.com
+. For example, some instances are general-purpose (balanced resources), while others are compute-optimized or memory-optimized for specific workloads.
+Flexible Scaling: You can launch or stop instances quickly and automatically scale the number of servers up or down as needed. You pay only for the capacity you actually use​
+docs.aws.amazon.com
+.
+Example Uses: EC2 is commonly used for hosting websites, running applications or databases, and processing large data sets. For instance, general-purpose instances are ideal for web servers and code repositories​
+aws.amazon.com
+
+EC2 provides resizable compute capacity — virtual machines in the cloud.
+Instance families (e.g., t4g, m5, c6g) are optimized for different workloads: general-purpose, compute-optimized, memory-optimized, etc.
+You can choose on-demand, reserved, spot, or dedicated hosts depending on cost and use case.
+Auto Scaling and Elastic Load Balancing (ELB) help you handle variable workloads.
+Security: You control access with key pairs, security groups (firewalls), and IAM roles for EC2.
+use cases: Hosting scalable applications, high-performance computing (HPC), container workloads, etc.
+
+
+AWS Lambda
+Serverless Compute: AWS Lambda lets you run code without managing any servers​
+docs.aws.amazon.com
+. You just upload your code (as a function), and Lambda takes care of provisioning and running it.
+Event-Driven: Your Lambda function runs only when triggered by an event. Common triggers include uploading a file to S3 or invoking an API through API Gateway​
+docs.aws.amazon.com
+.
+Automatic Scaling and Billing: Lambda automatically scales the compute resources based on demand, and you pay only for the compute time your code consumes​
+docs.aws.amazon.com
+ (billed in milliseconds). There is no charge when your code is not running.
+Use Cases: Lambda is great for tasks like processing files or images after they arrive, handling web or mobile API requests, processing streaming data (e.g. from IoT devices), and automating routine backend work.
+
+Event-driven, serverless compute service: You upload code (functions), define triggers, and AWS handles the infrastructure.
+Languages supported: Python, Node.js, Java, Go, .NET, etc.
+Lambda integrates with services like S3, DynamoDB, EventBridge, CloudWatch, and API Gateway.
+Function lifecycle:
+Cold start (first execution may take longer)
+Warm execution (faster, reuses execution context)
+You can configure memory (128 MB–10 GB), timeout (up to 15 mins), and concurrency.
+Billing: Based on request count and duration (ms).
+
+
+Amazon EBS (Elastic Block Store)
+Block Storage for EC2: Amazon EBS provides durable, block-level storage volumes for use with EC2 instances​
+docs.aws.amazon.com
+. An EBS volume is like a virtual hard drive that you attach to a virtual server.
+Persistent Volumes: EBS volumes act like hard drives attached to your instance. The data on an EBS volume persists independently of the life of the instance​
+docs.aws.amazon.com
+. This means your data remains safe even if you stop or terminate the EC2 instance.
+Multiple Volumes: You can attach multiple EBS volumes to a single EC2 instance (within the same availability zone)​
+docs.aws.amazon.com
+. Each volume can be used as a root drive or additional data storage.
+Volume Types: Common EBS volume types include SSD-based volumes like gp2/gp3 (General Purpose SSD) and io1/io2 (Provisioned IOPS SSD), as well as HDD-based volumes st1 (Throughput Optimized) and sc1 (Cold HDD)​
+
+. Each type has different performance and cost characteristics.
+Common Uses: EBS is often used for the instance’s operating system disk, databases, or any application that needs frequent read/write access and data persistence.
+
+Persistent block-level storage volumes for EC2.
+You can:
+  Attach one volume to one EC2 instance (but multiple volumes to one instance).
+  Choose between performance tiers:
+  gp3 (general-purpose SSD),
+  io2 (high-performance IOPS SSD),
+  st1 (throughput HDD),
+  sc1 (cold HDD).
+  Snapshots can back up volumes to S3 and can be encrypted.
+  Use cases: Databases, app servers, file systems, logs, or boot volumes.
+
+
+Amazon S3 (Simple Storage Service)
+Object Storage: Amazon S3 is an object storage service that lets you store and retrieve any amount of data in the cloud​
+docs.aws.amazon.com
+. It is highly scalable and durable.
+Buckets and Objects: Data in S3 is organized into objects (files) and stored inside buckets (containers)​
+docs.aws.amazon.com
+. To use S3, you create a named bucket in a region and then upload objects into it. Each object is identified by a unique key (file name).
+Storage Classes: S3 offers different storage classes for different needs. For example, S3 Standard is for frequently accessed data, Standard-Infrequent Access (Standard-IA) and One Zone-IA for less frequent access, and Glacier classes (Instant Retrieval, Flexible Retrieval, Deep Archive) for low-cost, long-term archiving​
+docs.aws.amazon.com
+.
+Common Uses: S3 is often used for storing website files, backups, big data and analytics data, logs, and media. It serves as the storage backbone for many AWS services and applications.
+
+Object storage: Data is stored as objects in buckets.
+Each object includes data, metadata, and a unique key (name).
+Storage classes help you optimize cost:
+  S3 Standard (frequent access),
+  S3 Standard-IA, One Zone-IA (less frequent access),
+  S3 Glacier, Deep Archive (long-term archival).
+Lifecycle policies automate transitions between classes.
+Durability: 99.999999999% (11 9s) across multiple AZs.
+Versioning, encryption (SSE-S3, SSE-KMS), and access control (bucket policies, ACLs) provide strong data management and security.
+
+✅ Sample Services / Use Cases by AWS Resource
+
+AWS Service :EC2 (Elastic Compute Cloud)	
+Description :Virtual machine in the cloud with full OS control	
+Example Use Case or Integration : Hosting a web server (e.g. NGINX), backend applications, or running Docker containers
+
+AWS Service : Lambda	
+Description : Serverless compute that runs code in response to events	
+Example Use Case or Integration : Resizes an image automatically when uploaded to an S3 bucket
+
+AWS Service : EBS (Elastic Block Store)	
+Description : Block storage for EC2 instances, like a virtual hard drive	
+Example Use Case or Integration : Hosting a database volume (e.g., PostgreSQL or MySQL data directory) on an EC2 instance
+
+AWS Service : S3 (Simple Storage Service)	
+Description : Object storage service, highly durable and scalable	
+Example Use Case or Integration :  Storing static website files, user uploads, backups, or logs
+
+AWS Service : EFS (Elastic File System)	
+Description : Fully managed shared file system accessible by multiple EC2s	
+Example Use Case or Integration :   Centralized file share for a fleet of web servers needing access to shared assets (like code, configs, or media files)
+
+
+🔍 Additional Notes
+EBS vs EFS:
+
+EBS is like attaching a hard disk to a single EC2 instance (block storage).
+EFS is more like a shared network drive — multiple EC2s (in the same VPC) can mount it at the same time (file-level access).
+Lambda doesn't use EBS or EFS directly, but:
+You can connect Lambda to EFS if you need persistent file access beyond the /tmp directory (e.g. for AI models, shared scripts).
+
+Quiz Questions
+What is Amazon EC2 used for?
+A. Storing objects (files) in the cloud.
+B. Running virtual servers (instances) in the cloud.
+C. Automatically scaling code execution without managing servers.
+D. Providing DNS for domain names.
+answer : B
+What does an EC2 instance represent?
+A. A container for objects in S3.
+B. A virtual server in the AWS cloud.
+C. A block of persistent storage.
+D. A serverless function execution.
+answer : B
+Which of these is a characteristic of an EC2 instance type?
+A. It specifies an operating system.
+B. It defines fixed resource configurations (CPU, memory, storage, network)​
+C. It is a storage class for data.
+D. It is a programming model for AWS services.
+answer : B
+Which is a common use case for Amazon EC2?
+A. Hosting a continuously running web server.
+B. Running event-driven code without servers.
+C. Storing and retrieving objects in storage.
+D. Providing a relational database service.
+answer : B
+What is AWS Lambda?
+A. A serverless compute service to run code without managing servers.
+B. A service for running virtual machines.
+C. A managed database service.
+D. A network firewall service.
+answer : A
+Which statement about AWS Lambda is true?
+A. You must provision and manage servers for Lambda.
+B. You pay only for the compute time your Lambda function uses​
+C. Lambda functions can only be written in one programming language.
+D. Lambda is used to host relational databases.
+answer : B
+Which of the following can trigger a Lambda function?
+A. Uploading a file to an Amazon S3 bucket.
+B. Launching a new EC2 instance.
+C. Increasing an EBS volume size.
+D. Creating a new AWS IAM user.
+answer : A
+Which is NOT a typical trigger for an AWS Lambda function?
+A. An HTTP request via API Gateway.
+B. A new object created in S3.
+C. A new record in an Amazon DynamoDB stream.
+D. A DNS query to Amazon Route 53.
+answer : D
+Amazon EBS provides what kind of storage?
+A. Object storage for any amount of data.
+B. Block-level storage that can be attached to EC2 instances​
+C. A file storage system for EC2 instances.
+D. In-memory caching for databases.
+answer : B
+EBS volumes can be attached to which AWS service?
+A. AWS Lambda functions.
+B. Amazon EC2 instances.
+C. Amazon S3 buckets.
+D. Amazon CloudFront distributions.
+answer : B
+Which of the following are examples of Amazon EBS volume types?
+A. gp2 and io1 (SSD volumes).
+B. S3 and Glacier (object storage classes).
+C. t2 and m5 (EC2 instance families).
+D. us-east-1 and eu-west-1 (AWS regions).
+answer : A
+What is Amazon S3 primarily used for?
+A. Running virtual servers.
+B. Storing files (objects) in the cloud​
+C. Executing code without servers.
+D. Providing hardware block storage.
+answer : B
+In Amazon S3, what is a bucket?
+A. A container for objects (files) in S3.
+B. A virtual machine in AWS.
+C. A piece of executable code.
+D. An EC2 instance type.
+answer : A
+Which S3 storage class is designed for the lowest-cost archival of data?
+A. S3 Standard.
+B. S3 Standard-Infrequent Access (Standard-IA).
+C. S3 Glacier Deep Archive.
+D. S3 One Zone-IA.
+answer : C
+Which scenario is best suited for AWS Lambda instead of EC2?
+A. Running a constantly active web server.
+B. Processing files automatically whenever they are uploaded to S3.
+C. Hosting a large-scale relational database.
+D. Storing large backups of data.
+answer : D
+
+1. What is Amazon EC2 used for?
+✅ Your answer: B (Correct)
+Explanation: EC2 provides scalable virtual servers (instances) in the AWS Cloud.
+
+2. What does an EC2 instance represent?
+✅ Your answer: B (Correct)
+Explanation: An EC2 instance is a virtual server running in the AWS cloud.
+
+3. Which of these is a characteristic of an EC2 instance type?
+✅ Your answer: B (Correct)
+Explanation: Instance types define CPU, memory, storage, and networking capabilities.
+
+4. Which is a common use case for Amazon EC2?
+✅ Your answer: A (you chose B, but correct is A) ❌
+Explanation: EC2 is used for hosting a continuously running web server.
+(Running event-driven code without servers describes Lambda.)
+
+5. What is AWS Lambda?
+✅ Your answer: A (Correct)
+Explanation: Lambda runs your code without you managing any server infrastructure.
+
+6. Which statement about AWS Lambda is true?
+✅ Your answer: B (Correct)
+Explanation: You pay only for the compute time (duration) your Lambda function uses.
+
+7. Which of the following can trigger a Lambda function?
+✅ Your answer: A (Correct)
+Explanation: An event like uploading a file to S3 can trigger a Lambda function.
+
+8. Which is NOT a typical trigger for an AWS Lambda function?
+✅ Your answer: D (Correct)
+Explanation: DNS queries to Route 53 do not trigger Lambda directly.
+
+9. Amazon EBS provides what kind of storage?
+✅ Your answer: B (Correct)
+Explanation: EBS is block storage for use with EC2 instances.
+
+10. EBS volumes can be attached to which AWS service?
+✅ Your answer: B (Correct)
+Explanation: EBS volumes attach to EC2 instances only (not S3, CloudFront, etc.).
+
+11. Which of the following are examples of Amazon EBS volume types?
+✅ Your answer: A (Correct)
+Explanation: gp2, gp3, io1, and io2 are EBS SSD volume types.
+
+12. What is Amazon S3 primarily used for?
+✅ Your answer: B (Correct)
+Explanation: S3 stores objects (files) with high durability and scalability.
+
+13. In Amazon S3, what is a bucket?
+✅ Your answer: A (Correct)
+Explanation: A bucket is a container for storing objects (files) in S3.
+
+14. Which S3 storage class is designed for the lowest-cost archival of data?
+✅ Your answer: C (Correct)
+Explanation: S3 Glacier Deep Archive is the cheapest storage for archival data.
+
+15. Which scenario is best suited for AWS Lambda instead of EC2?
+❌ Your answer: D (Incorrect) (Correct answer: B)
+Explanation:
+
+Processing files automatically when uploaded to S3 fits Lambda (event-driven, serverless).
+
+Storing large backups is a storage use case, better for S3, not Lambda.
+
+📊 Final Score:
+✅ 13 Correct
+❌ 2 Incorrect
+👉 87% Accuracy — Excellent job! You're nearly exam-ready at this level.
+
+Question 1
+Which statement best describes Amazon EFS (Elastic File System)?
+A. It is a local storage volume for EC2 instances only.
+B. It is object storage for long-term backup.
+C. It is a scalable file storage that can be mounted by multiple EC2 instances.
+D. It is a block storage device used for high-performance databases.
+answer : C
+
+Question 2
+Which feature allows an EC2 instance to scale automatically based on demand?
+A. Elastic Load Balancer
+B. AWS Auto Scaling
+C. Amazon CloudFront
+D. EC2 Reserved Instances
+answer : C
+Question 3
+Which AWS service allows you to run a function in response to an HTTP request without provisioning a web server?
+A. EC2 with Apache
+B. Lambda with CloudFront
+C. Lambda with API Gateway
+D. EC2 with Elastic Load Balancer
+answer : C
+
+Question 4
+Which EC2 pricing option is best for workloads that run continuously for 1 year and require cost savings?
+A. On-Demand
+B. Reserved Instances (1-Year Term)
+C. Spot Instances
+D. Dedicated Hosts
+answer : B
+
+Question 5
+You need to run stateless, short-lived processing tasks with minimal cost. Which option is most suitable?
+A. EC2 Reserved Instance
+B. EC2 Spot Instance
+C. AWS Lambda
+D. EBS with EC2
+answer : B
+Question 6
+What is the maximum size of a single object in S3?
+A. 5 GB
+B. 50 GB
+C. 5 TB
+D. Unlimited
+answer : D
+Question 7
+Which statement is true about Amazon EBS snapshots?
+A. They are automatically stored in EBS.
+B. They are stored in Amazon Glacier.
+C. They are stored in S3 and can be used to restore volumes.
+D. They cannot be copied across regions.
+answer : C
+
+Question 8
+How can you enable high availability for a web application hosted on EC2?
+A. Use a single EC2 instance with EBS
+B. Use EC2 Auto Scaling and Elastic Load Balancer across multiple AZs
+C. Use S3 and Glacier together
+D. Use Lambda with S3
+answer : B
+Question 9
+Which of the following is a valid use case for Amazon S3 Versioning?
+A. To allow automatic scaling of EC2
+B. To track and restore previous versions of uploaded files
+C. To optimize performance of Lambda functions
+D. To increase encryption levels
+answer : D
+Question 10
+Which statement about EFS and EBS is correct?
+A. EBS can be shared across multiple EC2s, EFS cannot.
+B. EFS is for block storage, EBS is for file storage.
+C. EFS allows multiple EC2 instances to access the same data concurrently.
+D. Both are used to store static website files.
+answer : D
+
+Question 1
+Your Answer: C ✅
+Correct!
+Explanation: Amazon EFS is a scalable file storage system that can be shared by multiple EC2 instances across AZs.
+
+Question 2
+Your Answer: C ❌
+Correct Answer: B – AWS Auto Scaling
+Explanation: Auto Scaling adjusts EC2 instance count automatically.
+CloudFront (C) is a CDN, used for faster delivery, not scaling EC2.
+
+Question 3
+Your Answer: C ✅
+Correct!
+Explanation: API Gateway connects with Lambda to handle HTTP requests without servers.
+
+Question 4
+Your Answer: B ✅
+Correct!
+Explanation: Reserved Instances provide cost savings for predictable, long-running workloads.
+
+Question 5
+Your Answer: B ❌
+Correct Answer: C – AWS Lambda
+Explanation: For short-lived, stateless, cost-effective tasks, Lambda is better than EC2 Spot (which is cost-efficient but still requires instance setup).
+
+Question 6
+Your Answer: D ❌
+Correct Answer: C – 5 TB
+Explanation: The maximum size of a single S3 object is 5 TB.
+(Multipart upload is used for files >5 GB.)
+
+Question 7
+Your Answer: C ✅
+Correct!
+Explanation: EBS snapshots are stored in S3, though not visible like S3 objects.
+
+Question 8
+Your Answer: B ✅
+Correct!
+Explanation: Auto Scaling + ELB across multiple Availability Zones ensures high availability and fault tolerance.
+
+Question 9
+Your Answer: D ❌
+Correct Answer: B – To track and restore previous versions of uploaded files
+Explanation: S3 Versioning lets you recover or maintain versions of files. Not for encryption or scaling.
+
+Question 10
+Your Answer: D ❌
+Correct Answer: C – EFS allows multiple EC2 instances to access the same data concurrently
+Explanation: EFS = file system accessed concurrently by many EC2s.
+EBS = block storage, attached to a single EC2 at a time.
+
+🟩 Summary:
+
+Question	Your Answer	Correct Answer	Result
+Q1	C	C	✅
+Q2	C	B	❌
+Q3	C	C	✅
+Q4	B	B	✅
+Q5	B	C	❌
+Q6	D	C	❌
+Q7	C	C	✅
+Q8	B	B	✅
+Q9	D	B	❌
+Q10	D	C	❌
+✅ Correct: 5
+❌ Incorrect: 5
+📊 Score: 50% – A good intermediate checkpoint!
+
+🔁 Q2: Auto Scaling vs CloudFront
+Q: Which feature allows an EC2 instance to scale automatically based on demand?
+✅ Correct Answer: B – AWS Auto Scaling
+❌ Your Answer: C – CloudFront
+
+Review:
+
+AWS Auto Scaling: Adjusts the number of EC2 instances automatically based on traffic, CPU, memory, etc.
+
+Amazon CloudFront: A Content Delivery Network (CDN) that caches content at edge locations to deliver web content faster.
+
+📌 Tip to remember:
+
+“Auto Scaling = Auto adjust EC2 count”
+“CloudFront = Fast content delivery, not compute scaling”
+
+🧠 Q5: Lambda vs EC2 Spot for Short-lived Tasks
+Q: You need to run stateless, short-lived processing tasks with minimal cost.
+✅ Correct Answer: C – AWS Lambda
+❌ Your Answer: B – EC2 Spot Instance
+
+Review:
+
+Lambda: Best for short tasks like image processing, triggered by events. No server to manage.
+
+EC2 Spot: Cheaper EC2 option, but you still manage infrastructure. Used for flexible tasks (e.g., batch jobs), not ideal for event-driven tasks.
+
+📌 Tip to remember:
+
+“Stateless + short = Lambda”
+“Cheap compute for flexible long-running = EC2 Spot”
+
+🗂️ Q6: S3 Object Size Limits
+Q: What is the maximum size of a single object in S3?
+✅ Correct Answer: C – 5 TB
+❌ Your Answer: D – Unlimited
+
+Review:
+
+S3 allows up to 5 TB per object.
+
+For files >5 GB, use multipart upload.
+
+“Unlimited” applies to total storage, not per object.
+
+📌 Tip to remember:
+
+“S3: Each object ≤ 5 TB. Total bucket size = virtually unlimited.”
+
+🕘 Q9: S3 Versioning
+Q: What is a valid use case for Amazon S3 Versioning?
+✅ Correct Answer: B – To track and restore previous versions of uploaded files
+❌ Your Answer: D – To increase encryption levels
+
+Review:
+
+S3 Versioning keeps old versions of files, useful for recovery or auditing.
+
+Encryption is managed by enabling SSE (e.g., SSE-S3 or SSE-KMS), unrelated to versioning.
+
+📌 Tip to remember:
+
+“Versioning = file history, not security”
+
+📁 Q10: EFS vs EBS
+Q: Which is correct about EFS and EBS?
+✅ Correct Answer: C – EFS allows multiple EC2 instances to access the same data concurrently
+❌ Your Answer: D – Both are used to store static website files
+
+Review:
+
+EBS = Block storage. One EC2 at a time.
+
+EFS = Network file system. Shared access for many EC2s.
+
+Static websites usually go on S3, not EBS/EFS.
+
+
+Question 1
+Which service is best for hosting a static website?
+A. Amazon EC2
+B. Amazon Lambda
+C. Amazon S3
+D. Amazon EFS
+answer : C
+Question 2
+Which storage option is recommended for high-performance transactional workloads, like databases?
+A. Amazon EFS
+B. Amazon S3 Glacier
+C. Amazon EBS
+D. Amazon CloudFront
+answer :A
+Question 3
+What is one benefit of using AWS Lambda?
+A. You can control the server’s operating system.
+B. You only pay for the compute time used.
+C. You must manage scaling manually.
+D. It runs 24/7 by default.
+answer :B
+Question 4
+Which AWS service offers content delivery from edge locations to reduce latency?
+A. Amazon S3
+B. Amazon EC2
+C. Amazon CloudFront
+D. Amazon RDS
+answer :C
+Question 5
+What kind of storage is Amazon S3?
+A. File storage
+B. Block storage
+C. Object storage
+D. Ephemeral storage
+answer :C
+Question 6
+Which EC2 pricing model is best for variable workloads with no long-term commitment?
+A. Reserved Instances
+B. Spot Instances
+C. Dedicated Hosts
+D. On-Demand Instances
+answer :B
+Question 7
+You need shared storage that can scale and be used by multiple EC2 instances. Which service should you use?
+A. Amazon S3
+B. Amazon EBS
+C. Amazon Glacier
+D. Amazon EFS
+answer : B
+Question 8
+Which AWS service lets you run code based on triggers like new S3 uploads or HTTP requests?
+A. EC2
+B. CloudFront
+C. Lambda
+D. S3
+answer :C
+Question 9
+Which S3 feature helps prevent accidental deletion of data?
+A. S3 Transfer Acceleration
+B. Versioning
+C. Lifecycle Rules
+D. Event Notifications
+answer :B
+Question 10
+What is the purpose of EC2 Security Groups?
+A. Encrypt data stored in EBS volumes.
+B. Control traffic in and out of EC2 instances.
+C. Automatically scale EC2 capacity.
+D. Store user credentials.
+answer :D
+Question 11
+Which service is not serverless?
+A. AWS Lambda
+B. Amazon DynamoDB
+C. Amazon EC2
+D. Amazon S3
+answer :C
+Question 12
+How can you make EC2 highly available?
+A. Use a single EC2 in one AZ.
+B. Use Auto Scaling with Load Balancer across multiple AZs.
+C. Use EBS snapshot backups.
+D. Use Lambda and Route 53.
+answer :B
+Question 13
+Which service allows distributing traffic across multiple EC2 instances?
+A. S3
+B. IAM
+C. CloudFront
+D. Elastic Load Balancer
+answer :D
+Question 14
+What’s the advantage of Amazon S3 Glacier?
+A. Real-time access
+B. Best for large-scale relational databases
+C. Low-cost long-term storage
+D. Shared file system access
+answer :C
+Question 15
+Which of these is a serverless compute option?
+A. EC2
+B. Lambda
+C. EBS
+D. CloudFront
+answer :B
+
+📌 Tip to remember:
+
+
+✅ Question 1
+Correct!
+C. Amazon S3 is perfect for hosting static websites (HTML, CSS, JS). No server management needed.
+
+❌ Question 2
+Correct Answer: C. Amazon EBS
+EBS provides block-level storage, ideal for high-performance databases and transactional workloads.
+EFS is file storage for shared access, not optimized for database performance.
+
+✅ Question 3
+Correct!
+B. You only pay for the compute time used – Lambda charges per request and execution time, not for idle time.
+
+✅ Question 4
+Correct!
+C. Amazon CloudFront is a CDN that delivers content from edge locations, reducing latency.
+
+✅ Question 5
+Correct!
+C. Object storage – Amazon S3 stores data as objects in buckets, ideal for unstructured data.
+
+❌ Question 6
+Correct Answer: D. On-Demand Instances
+You chose B. Spot Instances, which is cheaper but not reliable for all workloads.
+On-Demand is best for variable workloads with no upfront commitment, while Spot is for flexible, interruptible jobs.
+
+❌ Question 7
+Correct Answer: D. Amazon EFS
+EFS is a shared, scalable file system that multiple EC2 instances can access.
+B. EBS is block storage and can only be attached to one EC2 instance at a time (unless using special configurations like multi-attach for io1/io2).
+
+✅ Question 8
+Correct!
+C. Lambda gets triggered by events like S3 uploads, API Gateway calls, etc.
+
+✅ Question 9
+Correct!
+B. Versioning lets you keep and restore multiple versions of an object, preventing accidental overwrites or deletions.
+
+❌ Question 10
+Correct Answer: B. Control traffic in and out of EC2 instances
+Security Groups act like virtual firewalls.
+D refers to IAM services, not Security Groups.
+
+✅ Question 11
+Correct!
+C. Amazon EC2 is not serverless. You manage and provision servers manually.
+
+✅ Question 12
+Correct!
+B. Use Auto Scaling and ELB across multiple AZs for high availability and fault tolerance.
+
+✅ Question 13
+Correct!
+D. Elastic Load Balancer distributes traffic across multiple EC2s to balance load and improve fault tolerance.
+
+✅ Question 14
+Correct!
+C. Low-cost long-term storage – S3 Glacier is designed for archiving infrequently accessed data at the lowest cost.
+
+✅ Question 15
+Correct!
+B. Lambda is serverless – no provisioning or managing infrastructure.
+
+
+
+
