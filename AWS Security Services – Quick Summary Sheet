@@ -1,0 +1,34 @@
+🔐 AWS Security Services – Quick Summary Sheet
+
+Service : AWS IAM	
+Purpose : Identity & Access Management	
+Key Features : 
+- Create users, roles, policies 
+- Fine-grained access control
+
+Service : AWS Macie	
+Purpose : Sensitive Data Discovery (e.g., PII)	
+Key Features : 
+- Scans S3 for sensitive data
+- Uses ML for classification
+- Alerts on risks
+
+Service : AWS Shield	
+Purpose : DDoS Protection	
+Key Features :
+- Standard: Always-on basic protection
+- Advanced: 24/7 DDoS response team
+
+
+Service : AWS GuardDuty	
+Purpose : Threat Detection	
+Key Features :
+- Analyzes VPC Flow Logs, DNS, CloudTrail
+- Detects anomalies & threats
+
+AService : WS Security Hub	
+Purpose : Centralized Security Dashboard
+Key Features :
+- Aggregates findings from GuardDuty, Macie, IAM, etc.
+- Compliance checks (CIS, PCI-DSS)
+
