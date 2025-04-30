@@ -1,0 +1,175 @@
+✅ CLF-C02 – Purpose of "Security" in the Exam
+
+🌐 Key Topics:
+AWS Compliance Programs
+AWS Well-Architected Framework
+Shared Responsibility Model
+Security best practices (IAM, encryption, etc.)
+
+🔒 1. Compliance Programs
+📌 Purpose:
+Demonstrates how AWS aligns with global security & compliance standards, helping customers meet regulatory requirements.
+⚙️ Examples:
+HIPAA – Healthcare data protection (USA)
+GDPR – Data privacy (EU)
+SOC 1, 2, 3, ISO 27001, FedRAMP, etc.
+AWS Artifact – Access compliance reports and agreements.
+
+🏛️ 2. AWS Well-Architected Framework
+📌 Purpose:
+Provides best-practice guidance across 6 pillars to design secure, high-performing, resilient, and efficient cloud infrastructure.
+🧱 Pillars:
+    Operational Excellence
+    Security
+    Reliability
+    Performance Efficiency
+    Cost Optimization
+    Sustainability
+
+🔐 3. Shared Responsibility Model
+AWS is responsible for security of the cloud (hardware, networking, facilities).
+Customers are responsible for security in the cloud (data, identity, encryption, configuration).
+
+📄 4. Exam Expectation:
+You’re not expected to configure security tools—but you should:
+Recognize AWS compliance tools
+Understand AWS security best practices
+Know the shared responsibility model
+Know the Well-Architected Framework pillars
+
+🧠 15 Practice Questions – Security & Compliance
+1. Which AWS service allows access to compliance reports and certifications?
+A. AWS IAM
+B. AWS Shield
+C. AWS Artifact ✅
+D. AWS Macie
+
+2. In the AWS Shared Responsibility Model, who is responsible for patching guest operating systems on Amazon EC2?
+A. AWS
+B. The customer ✅
+C. The internet provider
+D. AWS Support
+
+3. Which pillar of the AWS Well-Architected Framework focuses on protecting information and systems?
+A. Performance Efficiency
+B. Reliability
+C. Security ✅
+D. Cost Optimization
+
+4. AWS is responsible for which of the following under the Shared Responsibility Model?
+A. Data encryption in applications
+B. IAM policy configuration
+C. Security of the physical data centers ✅
+D. Customer data management
+
+5. What AWS service helps protect against DDoS attacks?
+A. AWS Macie
+B. AWS Shield ✅
+C. AWS Artifact
+D. AWS Firewall Manager
+
+6. Which AWS service helps discover and protect sensitive data such as PII?
+A. AWS WAF
+B. AWS CloudTrail
+C. AWS Macie ✅
+D. AWS IAM
+
+🔍 Which AWS service helps discover and protect sensitive data such as PII (Personally Identifiable Information)?
+✅ Answer: AWS Macie
+
+📌 What is AWS Macie?
+AWS Macie is a security service that uses machine learning (ML) and pattern matching to automatically discover, classify, and protect sensitive data stored in Amazon S3.
+
+🔐 Key Features of AWS Macie:
+
+Feature : PII Detection
+Description : Finds data like names, email addresses, credit card numbers, national IDs, etc.
+
+Feature : S3 Integration	
+Description : Scans Amazon S3 buckets to locate sensitive data.
+
+Feature : Data Classification	
+Description : Labels files as containing sensitive data or not (e.g., PII, financial info)
+
+Feature : Security Alerts	
+Description : Sends alerts if publicly accessible buckets contain sensitive data..
+
+Feature : Automation	
+Description : Integrates with EventBridge or Lambda to automate remediation.
+
+💡 Examples of PII that Macie can detect:
+    Full names
+    Phone numbers
+    Credit card numbers
+    Passport numbers
+    National ID numbers (e.g., Social Security Numbers)
+    Email addresses
+    Bank account numbers
+
+📘 Use Case Scenario (Exam & Real World):
+A company stores customer data in S3. They must ensure that no sensitive information (like Social Security Numbers or emails) is exposed.
+✅ Use AWS Macie to scan S3, classify sensitive data, and alert teams if there's a risk of data exposure.
+
+🧠 In the CLF-C02 Exam:
+  You don’t need to configure Macie—but you should know:
+  It’s used for discovering and protecting sensitive data like PII.
+  It’s integrated with S3.
+  It uses machine learning to analyze content.
+  It can trigger alerts or automated actions.
+
+7. A customer wants to review AWS compliance with ISO 27001. Where can they find this information?
+A. AWS Security Hub
+B. AWS CloudTrail
+C. AWS Artifact ✅
+D. AWS KMS
+
+8. Which Well-Architected pillar emphasizes recovering from infrastructure or service disruptions?
+A. Operational Excellence
+B. Reliability ✅
+C. Security
+D. Sustainability
+
+9. Who is responsible for configuring security groups for an EC2 instance?
+A. AWS
+B. The customer ✅
+C. AWS Partner
+D. Amazon Route 53
+
+10. What AWS service provides a unified view of security alerts across multiple AWS accounts?
+A. AWS Shield
+B. AWS Security Hub ✅
+C. AWS IAM
+D. AWS Config
+
+11. Which AWS tool recommends best practices to improve cost, performance, and security?
+A. AWS Artifact
+B. AWS Trusted Advisor ✅
+C. AWS CloudTrail
+D. AWS Config
+
+12. What is the goal of the Well-Architected Framework?
+A. Define pricing models
+B. Automate serverless functions
+C. Provide cloud architecture best practices ✅
+D. Manage budgets
+
+13. In the Shared Responsibility Model, what is AWS responsible for? (Choose TWO)
+A. Physical security ✅
+B. Network infrastructure ✅
+C. Customer data
+D. IAM user roles
+E. Operating system updates
+
+14. What service tracks API activity in an AWS account?
+A. AWS Shield
+B. AWS IAM
+C. AWS CloudTrail ✅
+D. AWS Config
+
+15. Which Well-Architected pillar helps you optimize for sustainability and reduce carbon footprint?
+A. Operational Excellence
+B. Sustainability ✅
+C. Cost Optimization
+D. Performance Efficiency
+
+
