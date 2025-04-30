@@ -1,0 +1,127 @@
+🌐 Global Scope Services
+These services operate across all Regions, not tied to any single Region or AZ.
+
+IAM (users, roles, policies)
+Route 53 (DNS)
+CloudFront (CDN)
+AWS WAF (Web Application Firewall rules)
+AWS Shield (DDoS protection)
+AWS Organizations
+Service Quotas
+SSO / IAM Identity Center
+
+🟩 Region Scope Services
+These services are available per Region but span multiple AZs within that Region.
+
+VPC
+RDS (Relational Database Service)
+Elastic Load Balancer (ELB)
+Lambda
+CloudWatch
+CloudTrail (can be regional or global)
+S3 (data stored in one Region, globally accessible)
+SNS (Simple Notification Service)
+SQS (Simple Queue Service)
+API Gateway
+ECS / EKS (container services)
+DynamoDB
+Elastic Beanstalk
+
+🏗️ Availability Zone (AZ) Scope Services
+These services run inside a single AZ within a Region. They are designed for fault isolation.
+
+EC2 instances
+EBS volumes
+Subnets (you define which AZ they are in)
+Auto Scaling Group placement (targets specific AZs)
+Placement Groups
+
+🔐 VPC Scope Services
+These are services or resources that are tied specifically to a single VPC.
+
+Security Groups
+NACLs (Network ACLs)
+Subnets
+Route Tables
+VPC Endpoints (Gateway/Interface)
+Elastic IPs (when assigned in a VPC)
+VPC Peering
+Transit Gateway Attachments
+DHCP Option Sets
+Internet Gateways / NAT Gateways
+
+
+🧠 Tip for AWS Exams:
+If a service needs fault tolerance, it usually spans AZs or Regions.
+If it manages access/security or identity, it’s likely Global.
+If it involves networking, check if it’s VPC-specific.
+
+
+
+
+
+
+✅ AWS Services Scope Summary (List Format)
+EC2
+Scope: Availability Zone
+Description: EC2 instances run in a specific AZ within a Region.
+
+EBS (Elastic Block Store)
+Scope: Availability Zone
+Description: EBS volumes must be in the same AZ as the EC2 instance to attach.
+
+S3 (Simple Storage Service)
+Scope: Region (globally accessible)
+Description: Data is stored in a specific Region but accessible globally via public endpoints.
+
+VPC (Virtual Private Cloud)
+Scope: Region
+Description: A VPC spans all Availability Zones within a single Region.
+
+Subnet
+Scope: Availability Zone
+Description: A subnet is a slice of the VPC that exists within a single AZ.
+
+Security Group
+Scope: VPC
+Description: Acts as a virtual firewall for EC2 instances; tied to one VPC.
+
+Network ACL (NACL)
+Scope: VPC
+Description: Stateless firewall rules applied at the subnet level within a VPC.
+
+Route 53
+Scope: Global
+Description: Global DNS service that routes user requests to AWS or external resources.
+
+CloudWatch
+Scope: Region
+Description: Collects metrics, logs, and alarms from services within the same Region.
+
+CloudTrail
+Scope: Region or Global
+Description: Logs all API activity for a specific Region or across all Regions if configured.
+
+Lambda
+Scope: Region
+Description: Functions are deployed in a Region but not tied to a specific AZ.
+
+RDS (Relational Database Service)
+Scope: Region
+Description: Databases run in a Region; Multi-AZ deployment enables replication across AZs.
+
+Elastic Load Balancer (ELB)
+Scope: Region
+Description: Balances traffic across EC2 instances in multiple AZs within the same Region.
+
+VPC Endpoint (for S3, DynamoDB, etc.)
+Scope: VPC (in a Region)
+Description: Enables private access to AWS services without public internet; scoped to the VPC and Region.
+
+IAM (Identity and Access Management)
+Scope: Global
+Description: IAM roles, policies, and users apply across all AWS Regions in your account.
+
+CloudFront
+Scope: Global
+Description: Content delivery network (CDN) with global edge locations for low-latency access.
