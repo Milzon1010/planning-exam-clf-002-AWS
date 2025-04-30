@@ -1,0 +1,83 @@
+🔐 1. AWS Shared Responsibility Model
+
+Responsibility
+Physical security of data centers AWS	✅	Customer❌
+Network & infrastructure	AWS✅	Customer❌
+Configuring IAM roles/policies	AWS❌	Customer✅
+Securing applications/data	AWS❌	Customer✅
+Operating system patching (EC2)	AWS❌	Customer✅
+
+🧠 Exam Tip: You must know AWS is responsible for the cloud, and you are responsible in the cloud.
+
+🛡️ 2. Identity & Access Management (IAM)
+Controls who can do what in your AWS environment.
+Use least privilege: give only the minimum permissions needed.
+
+Key components:
+  Users: Individual accounts
+  Groups: Collection of users
+  Roles: Temporary access (e.g., EC2 assuming a role)
+  Policies: Define permissions in JSON format
+  MFA (Multi-Factor Authentication): Adds extra security
+
+🧠 Exam Tip: IAM is a free global service.
+
+📊 3. AWS Compliance Programs
+  AWS meets many global compliance standards:
+    HIPAA (healthcare, US)
+    GDPR (data privacy, EU)
+    ISO 27001, SOC 1/2/3, FedRAMP, etc.
+Use AWS Artifact to download reports and agreements.
+
+🧠 Exam Tip: Know AWS Artifact = compliance documentation portal.
+
+🔎 4. Security Services – Know Their Purpose
+
+Service	Purpose
+AWS IAM	Identity and access control
+AWS Organizations	Manage multiple accounts and apply policies
+AWS Shield	DDoS protection
+AWS WAF	Web Application Firewall to block bad traffic
+AWS GuardDuty	Threat detection and anomaly monitoring
+AWS Macie	ML-based detection of PII in S3
+AWS Security Hub	Central security findings dashboard
+AWS KMS	Manage encryption keys
+AWS CloudTrail	Track API calls and user activity logs
+
+🧠 Exam Tip: You don't configure them — just recognize what each does.
+
+
+📚 5. AWS Well-Architected Framework – Security Pillar
+One of 6 pillars focused on:
+    Data protection
+    Privilege management (IAM)
+    Infrastructure protection
+    Detection (GuardDuty, CloudTrail)
+    Incident response
+
+🧠 Exam Tip: Know the security pillar = protect systems & data.
+
+🧾 6. Logging, Monitoring & Encryption
+      CloudTrail – Logs API activity
+      CloudWatch – Metrics & alarms (not focused on security only)
+      KMS (Key Management Service) – Manage encryption keys
+      S3 default encryption – Encrypt S3 buckets automatically
+      IAM Access Analyzer – Identifies overly broad permissions
+
+🧠 Exam Tip: Know that encryption is the customer's responsibility, but AWS provides tools.
+
+🧠 7. Real-World Scenarios in Exam Questions
+      Who secures EC2 patches? ➤ Customer
+      How to find sensitive data in S3? ➤ Macie
+      Which tool aggregates security findings? ➤ Security Hub
+      Where do you view API calls? ➤ CloudTrail
+      DDoS protection for website? ➤ AWS Shield
+
+🎯 Final Exam Tips:
+Know the difference between security services (Macie ≠ GuardDuty).
+Understand the Shared Responsibility Model clearly.
+Be familiar with the Well-Architected Framework (especially the Security Pillar).
+Expect multiple-choice questions asking you to identify the best tool for a security-related scenario.
+
+
+
