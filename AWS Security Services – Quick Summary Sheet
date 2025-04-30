@@ -32,3 +32,14 @@ Key Features :
 - Aggregates findings from GuardDuty, Macie, IAM, etc.
 - Compliance checks (CIS, PCI-DSS)
 
+
+🎯 How They Work Together:
+
+IAM controls access.
+Macie finds sensitive data.
+GuardDuty detects threats.
+Shield protects from DDoS attacks.
+Security Hub gives a centralized view and compliance summary.
+
+
+
