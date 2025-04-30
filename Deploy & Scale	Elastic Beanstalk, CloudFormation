@@ -1,0 +1,104 @@
+✅ Purpose in Exam (CLF-C02): Deploy & Scale
+
+Elastic Beanstalk
+What It Does : Platform-as-a-Service (PaaS) that automatically deploys and manages applications in the cloud
+Why It Matters in CLF-C02
+Shows how AWS automates deployment, scaling, monitoring, and capacity provisioning for developers.
+Use case :	Quickly deploy web apps (Java, Python, .NET, Node.js, etc.)
+Management : Manages environment, scaling, health checks
+Automation : Auto handles load balancing, auto-scaling, patching
+Developer-friendly : Abstracts underlying infrastructure
+Exam focus : Know it's used for fast, simple app deployment
+
+CloudFormation
+What It Does : Infrastructure as Code (IaC) service that uses templates to provision AWS resources automatically
+Why It Matters in CLF-C02
+Demonstrates how AWS enables repeatable, automated infrastructure deployment, reducing manual setup errors.
+Use case : Provision infrastructure using code (e.g., VPC, EC2, S3)
+Management : Defines entire architecture in JSON/YAML templates
+Automation : Fully automates stack creation, update, deletion
+Developer-friendly : Gives full control over infrastructure layout
+Exam focus : 	Know it automates and standardizes infrastructure setup
+
+🎯 Sample CLF-C02-style Questions
+
+
+
+Which AWS service allows developers to deploy and scale web applications quickly without managing infrastructure?
+
+A. CloudFormation
+B. Elastic Beanstalk 
+C. EC2
+D. AWS Config
+answer : B
+
+Which service helps automate the creation and management of AWS resources using templates?
+
+A. AWS Auto Scaling
+B. Elastic Beanstalk
+C. CloudFormation 
+D. CodeDeploy
+answer : C
+
+🔍 Elastic Beanstalk & CloudFormation – Practice Questions
+1. A company wants to deploy a web application without worrying about infrastructure provisioning. Which AWS service should they use?
+A. Amazon EC2
+B. AWS Lambda
+C. AWS Elastic Beanstalk ✅
+D. Amazon RDS
+
+2. Which AWS service enables users to create and manage infrastructure using code templates?
+A. Amazon CloudWatch
+B. AWS CloudFormation ✅
+C. AWS OpsWorks
+D. AWS Systems Manager
+
+3. What does AWS Elastic Beanstalk manage automatically for deployed applications? (Choose TWO)
+A. Operating system updates ✅
+B. Application code logic
+C. Load balancing ✅
+D. IAM policy creation
+E. Route 53 zone configuration
+
+4. Which of the following best describes AWS CloudFormation?
+A. A service to run serverless applications
+B. A monitoring and logging service
+C. A template-driven tool to deploy AWS resources ✅
+D. A managed database service
+
+5. You want to replicate your entire AWS infrastructure for development, staging, and production. What service helps you do this efficiently?
+A. Elastic Beanstalk
+B. AWS CloudFormation ✅
+C. AWS Config
+D. AWS Trusted Advisor
+
+6. A developer wants to upload application code, and AWS should handle provisioning and deployment. Which service is the best fit?
+A. AWS Lambda
+B. AWS CloudFormation
+C. AWS Elastic Beanstalk ✅
+D. AWS Auto Scaling
+
+7. What is a benefit of using CloudFormation?
+A. Eliminates the need for version control
+B. Reduces application development time
+C. Automates and standardizes infrastructure provisioning ✅
+D. Automatically scales application traffic
+
+8. A company needs to version-control infrastructure changes over time. What AWS feature supports this use case?
+A. CloudTrail
+B. CloudFormation templates ✅
+C. IAM Policies
+D. Amazon S3 lifecycle policies
+
+9. What format can CloudFormation templates be written in? (Choose TWO)
+A. Python
+B. YAML ✅
+C. JSON ✅
+D. Shell script
+E. XML
+
+10. When deploying with Elastic Beanstalk, what can you configure?
+A. The specific EC2 instance type ✅
+B. Custom IAM policies
+C. S3 bucket encryption keys
+D. DynamoDB table auto-scaling
