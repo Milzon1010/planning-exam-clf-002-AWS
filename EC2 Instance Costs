@@ -1,0 +1,39 @@
+💰 What Makes Up EC2 Instance Costs?
+Pricing Model
+  On-Demand – Pay per second/hour with no commitment. Most expensive, but flexible.
+  Reserved Instances (RI) – Commit for 1 or 3 years to get up to 72% discount.
+  Savings Plans – Similar to RI, but more flexible on instance types.
+  Spot Instances – Use unused capacity for up to 90% off. Can be interrupted anytime.
+  Dedicated Hosts/Instances – Pay for a physical host or isolated instance. Useful for compliance.
+
+Instance Type (Size + Family)
+  e.g., t3.micro, m5.large, c6g.xlarge
+  Larger instances = higher cost
+  Specialized types (e.g., GPU, high-memory) cost more
+
+Region
+  Pricing varies by AWS region (e.g., us-east-1 is usually cheaper than ap-southeast-1)
+  Choose region based on latency needs and cost optimization
+
+Operating System
+  Linux is usually cheaper than Windows or Red Hat/Enterprise
+  Licensing costs for OS are included in pricing
+
+Tenancy
+  Shared (default, cheapest)
+  Dedicated instance (isolated on physical hardware)
+  Dedicated host (reserve entire physical server)
+  Storage (EBS Volumes)
+  EC2 instance cost does not include storage
+
+You pay separately for:
+  EBS volume size/type (e.g., gp3, io1)
+  Snapshot storage
+  Provisioned IOPS
+
+Data Transfer
+  Inbound (into AWS): Free
+  Outbound (to internet): Charged based on GBs per month
+  Within same region (between AZs): Usually charged
+  Between regions: Charged at inter-region rates
+
