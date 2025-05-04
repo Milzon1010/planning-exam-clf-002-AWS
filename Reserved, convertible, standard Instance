@@ -1,0 +1,63 @@
+🔒 What is a Reserved Instance (RI)?
+Reserved Instances are a billing discount applied to EC2 (and some other services) when you commit to use a specific instance type over a 1-year or 3-year term.
+
+🔸 Important: RIs do not reserve capacity by default (except in zonal RIs); they just offer cost savings over On-Demand pricing.
+
+💡 Why Use Reserved Instances?
+  Save up to 72% compared to On-Demand pricing
+  Predictable workloads (e.g., always-on servers)
+  Long-term commitment = big savings
+
+🧩 Types of Reserved Instances
+1. Standard Reserved Instance
+    Highest discount (up to 72%)
+    Term: 1-year or 3-year
+    No flexibility: Cannot change instance family, region, OS, or tenancy
+    Can sell in the RI Marketplace
+    Best for stable, predictable workloads
+2. Convertible Reserved Instance
+    Lower discount (up to 54%)
+    Term: 1-year or 3-year
+    Can exchange for different instance types, OS, or tenancy
+    Great for long-term workloads with changing needs
+
+💰 Payment Options
+    You can choose how much to pay upfront:
+    All Upfront (AURI): Pay everything at the start → biggest savings
+    Partial Upfront (PURI): Pay part upfront + monthly
+    No Upfront (NURI): Pay monthly → lowest commitment, less savings
+
+🎯 Use Case Summary
+Use Case	Best Option
+  Long-term, steady workloads	Best Option : Standard RI
+  Need flexibility to change types	Best Option : Convertible RI
+  Max cost savings	Best Option : Standard RI + All Upfront
+  Changing needs, but still commit	Best Option : Convertible RI + Partial/No Upfront
+
+✅ Reserved Instances: What Are They in AWS?
+Reserved Instances are a pricing model — not an instance type or service. You use them mainly with:
+
+🛠 Services That Support RIs:
+  Amazon EC2 (Elastic Compute Cloud) — most common
+  Amazon RDS (Relational Database Service)
+  Amazon ElastiCache
+  Amazon Redshift
+  Amazon OpenSearch Service
+
+🔸 Reserved Instance Types (Pricing Models):
+  Standard Reserved Instance
+    Biggest discount (up to 72%)
+    Fixed instance specs (can’t change family, OS, etc.)
+    Can be sold in RI Marketplace (EC2 only)
+  Convertible Reserved Instance
+    Lower discount (up to 54%)
+    Allows changes in instance family, OS, or tenancy
+    Not sellable in RI Marketplace
+
+⚠️ Important: There are no instance types called "Reserved" or "Standard" in EC2.
+When you launch an EC2 instance, it’s still just an EC2 instance. If you’ve purchased an RI that matches its characteristics (e.g., type, region, OS), then AWS applies the RI discount automatically to your billing.
+
+🧠 So in short:
+  Reserved Instance = A commitment to use certain instance types for a discount
+  Standard/Convertible = The 2 types of pricing commitment under RIs
+  You still launch normal EC2/RDS instances — AWS just bills you differently
