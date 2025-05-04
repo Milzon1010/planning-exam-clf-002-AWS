@@ -1,0 +1,65 @@
+In AWS, the lowest support plan is the Basic Support Plan.
+
+✅ AWS Basic Support Plan – Key Features:
+Cost: Free (included with every AWS account)
+
+Support Channels: Only access to:
+
+AWS documentation
+AWS whitepapers
+AWS forums
+Trusted Advisor (limited checks only: 6 core checks)
+No access to:
+AWS Support engineers
+Technical support via email, chat, or phone
+Response time guarantees
+
+🔑 AWS Support Plans – Quick Comparison (above Basic)
+
+Developer Support (D)
+  Lowest paid tier
+  Email support only
+  Business hours access
+  Response time: < 24 hrs (general), < 12 hrs (system impaired)
+  Best for: Individual devs, testing, low-risk environments
+  Use Cases:
+    Building and testing applications
+    Learning and experimenting with AWS services
+    Proof-of-concept development with minimal risk
+
+Business Support (B)
+  24/7 support via email, chat, and phone
+  Full AWS Trusted Advisor access
+  Response time: < 1 hr for production issues
+  Best for: Production workloads, small to mid-sized businesses
+  se Cases:
+    Hosting websites and APIs in production
+    Running internal business apps on AWS
+    Managing cloud resources for multiple teams
+
+Enterprise On-Ramp (E)
+  Faster response times
+  Access to a pool of Technical Account Managers (TAM-lite)
+  Response time: < 30 min for critical issues
+  Best for: Fast-growing teams preparing for enterprise-level needs
+  Use Cases:
+    Preparing for enterprise-level growth
+    Launching customer-facing platforms
+    Needing occasional architectural guidance
+
+Enterprise Support (R)
+  Highest level of support
+  Dedicated Technical Account Manager (TAM)
+  Concierge support, architecture reviews
+  Response time: < 15 min for critical issues
+  Best for: Large enterprises with mission-critical applications
+  Use Cases:
+    Managing global-scale SaaS platforms
+    Operating regulated or high-security environments
+    Business continuity planning and enterprise-wide adoption
+
+
+
+💡 Mnemonic:
+“Dev Builds Everything Right”
+(Developer → Business → Enterprise On-Ramp → Enterprise)
