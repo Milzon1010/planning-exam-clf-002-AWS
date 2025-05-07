@@ -1,0 +1,81 @@
+1. Global Services
+These services are not confined to a single region and are generally available globally, meaning they operate across all AWS regions.
+
+Amazon CloudFront (CDN):
+Scope: Global (Content Delivery Network).
+Description: Distributes content to users worldwide via edge locations. Provides low latency by caching content at edge locations globally.
+
+Amazon Route 53 (DNS):
+Scope: Global (DNS service).
+Description: Global Domain Name System (DNS) service for routing traffic to resources globally, with health checks and routing policies.
+
+AWS Identity and Access Management (IAM):
+Scope: Global (Identity and permissions).
+Description: IAM is used to manage access to AWS services and resources globally, regardless of region.
+
+AWS Global Accelerator:
+Scope: Global.
+Description: Improves the availability and performance of your applications by directing traffic to the optimal AWS endpoint globally.
+
+Amazon S3 (Simple Storage Service):
+Scope: Global (though S3 buckets are tied to specific regions, the service itself is globally available).
+Description: Object storage service with global access to the data stored in specific regional buckets.
+
+2. Regional Services
+These services are tied to specific AWS regions, meaning they are deployed in a particular geographic location, but they can be replicated or accessed globally.
+
+Amazon EC2 (Elastic Compute Cloud):
+Scope: Regional (deployed within specific Availability Zones within a region).
+Description: Provides scalable compute resources. Instances are launched in specific regions, often spanning multiple Availability Zones (AZs).
+
+Amazon RDS (Relational Database Service):
+Scope: Regional (databases reside in specific regions).
+Description: Managed relational databases are deployed in a specific region with the option for replication across availability zones.
+
+Amazon VPC (Virtual Private Cloud):
+Scope: Regional.
+Description: Creates isolated networks within a region, where you can place resources such as EC2 instances, databases, and load balancers.
+
+AWS Lambda:
+Scope: Regional.
+Description: Serverless compute service where functions are deployed and executed in specific regions.
+
+Amazon SNS (Simple Notification Service):
+Scope: Regional.
+Description: Messaging service to send notifications within a region.
+
+3. Zone-Level Services (Availability Zone Specific)
+These services are specific to Availability Zones within an AWS region, typically affecting resources that require high availability or low latency.
+
+Amazon Elastic Block Store (EBS):
+Scope: Availability Zone.
+Description: Persistent block storage for EC2 instances, where volumes are tied to specific Availability Zones.
+
+Amazon ELB (Elastic Load Balancing):
+Scope: Availability Zone (within a region).
+Description: Distributes incoming traffic across multiple EC2 instances within a specific availability zone or across multiple AZs in a region.
+
+Amazon Aurora (with Multi-AZ deployment):
+Scope: Availability Zone (if multi-AZ is not configured).
+Description: A relational database that can be deployed in a single or multiple Availability Zones for high availability.
+
+4. Hybrid Services
+These services have a mix of global, regional, and zone-specific components.
+
+AWS Elastic Beanstalk:
+Scope: Regional, but operates across multiple zones.
+Description: PaaS (Platform as a Service) to deploy web applications and services. It can launch applications in multiple availability zones for high availability.
+
+AWS CloudTrail:
+Scope: Global (records API calls across regions), but logs are region-specific.
+Description: Tracks user activity and API usage across AWS services, regardless of region.
+
+Amazon CloudWatch:
+Scope: Regional (but can aggregate data across regions).
+Description: Monitoring service for AWS resources. While CloudWatch data is region-specific, it can aggregate across multiple regions.
+
+Summary of AWS Service Scope:
+Global: Services like CloudFront, Route 53, IAM are available globally.
+Regional: Services like EC2, S3 (regional buckets), RDS, Lambda are region-specific but accessible globally.
+
+Availability Zone: Services like EBS, ELB are specific to Availability Zones within a region.
