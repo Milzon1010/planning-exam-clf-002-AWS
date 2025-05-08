@@ -1,0 +1,106 @@
+Identify AWS compute services 
+ -  Amazon Elastic Compute Cloud (Amazon EC2): virtual servers with virtually limitless use cases 
+ -  Amazon Elastic Container Service (Amazon ECS): fully-managed container orchestration service 
+ -  Amazon Elastic Kubernetes Service (Amazon EKS): fully-managed container service to run Kubernetes 
+ -  Elastic Beanstalk: deploy and scale web applications by uploading code
+ -  Elastic Load Balancing: helps applications achieve fault tolerance
+ -  AWS Lambda: event-driven, serverless compute service to run code without provisioning or managing your own servers
+ -  AWS Fargate: serverless compute engine for containers
+ -  Amazon Lightsail: pre-configured websites and applications to help you get your projects up and running with minimal configurations on your end
+ -  Autoscaling provides elasticity
+
+
+Understanding and Identifying AWS Compute Services
+AWS offers a variety of compute services designed for different use cases. Here is a breakdown of the main AWS compute services you need to know:
+
+1. Amazon Elastic Compute Cloud (Amazon EC2)
+Definition: Virtual servers (instances) in the cloud with configurable CPU, memory, storage, and networking options.
+Use Cases:
+  Hosting websites and applications.
+  Running custom software or operating systems.
+  Performing batch processing.
+Key Features:
+  Choose instance types (general-purpose, compute-optimized, memory-optimized).
+  Configure auto-scaling to handle variable workloads.
+  Secure instances using Security Groups and IAM roles.
+
+2. Amazon Elastic Container Service (Amazon ECS)
+Definition: A fully managed container orchestration service for running Docker containers.
+Use Cases:
+  Deploying and managing containerized applications.
+  Running microservices or API services.
+Key Features:
+  Supports AWS Fargate (serverless) and EC2 launch types.
+  Integrates with Elastic Load Balancing (ELB) for high availability.
+  Manages container networking, security, and scaling.
+
+3. Amazon Elastic Kubernetes Service (Amazon EKS)
+Definition: A fully managed service to run Kubernetes (K8s) clusters.
+Use Cases:
+  deploying containerized applications using Kubernetes.
+  Managing complex, distributed applications with microservices.
+Key Features:
+  Fully managed Kubernetes control plane.
+  Supports both AWS Fargate and EC2 for compute.
+  Integrates with IAM for secure access control.
+
+4. AWS Elastic Beanstalk
+Definition: A platform-as-a-service (PaaS) that automatically handles deployment, scaling, and monitoring of web applications.
+Use Cases:
+  Quickly deploying web applications and APIs.
+  Scaling applications without manual configuration.
+Key Features:
+  Supports multiple programming languages (Java, Python, PHP, Node.js, etc.).
+  Automatically provisions AWS resources (EC2, S3, RDS, etc.).
+  Provides monitoring through CloudWatch.
+
+5. Elastic Load Balancing (ELB)
+Definition: A managed service that distributes incoming traffic across multiple targets (EC2 instances, containers, IP addresses).
+Use Cases:
+  Ensuring high availability for web applications.
+  Distributing traffic for microservices architectures.
+Key Features:
+  Supports Application Load Balancer (ALB), Network Load Balancer (NLB), and Gateway Load Balancer (GLB).
+  Provides SSL/TLS termination for secure connections.
+  Integrates with Auto Scaling for fault tolerance.
+
+6. AWS Lambda
+Definition: An event-driven, serverless compute service that runs code without provisioning or managing servers.
+Use Cases:
+  Executing code in response to events (e.g., file uploads, API requests).
+  Running serverless applications.
+  Real-time data processing.
+Key Features:
+  Supports multiple programming languages (Python, Node.js, Java, etc.).
+  Automatically scales based on the number of requests.
+  Pay only for the compute time used (milliseconds).
+
+7. AWS Fargate
+Definition: A serverless compute engine for containers, used with Amazon ECS or Amazon EKS.
+Use Cases:
+  Running containerized applications without managing servers.
+  Deploying microservices without infrastructure management.
+Key Features:
+  Supports Docker containers.
+  Automatically scales container resources.
+  No need to provision or manage EC2 instances.
+
+8. Amazon Lightsail
+Definition: A simplified cloud platform designed for small projects with pre-configured virtual servers, databases, and networking.
+Use Cases:
+  Quickly launching websites, blogs, and small applications.
+  Setting up development or testing environments.
+Key Features:
+  Predictable pricing.
+  Easy-to-use interface for beginners.
+  Supports pre-configured applications (WordPress, LAMP, Nginx, etc.).
+
+9. Auto Scaling
+Definition: An AWS service that automatically adjusts the number of compute resources based on demand.
+Use Cases:
+  Automatically adding or removing EC2 instances for a web application.
+  Maintaining performance during traffic spikes.
+Key Features:
+  Configurable scaling policies (manual, scheduled, or dynamic).
+  Integrates with ELB for highly available architectures.
+  Supports scaling groups for EC2 instances.
