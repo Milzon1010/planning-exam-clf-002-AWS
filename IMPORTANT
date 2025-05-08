@@ -80,6 +80,9 @@ Characteristics: Anycast IP, automatic failover, low-latency.
 Amazon CloudFront
 Function: Content Delivery Network (CDN).
 Characteristics: Fast, secure, supports HTTPS.
+use cases : 
+  Live and on-demand video streaming
+  Static asset caching
 
 AWS PrivateLink
 Function: Securely access services without exposing them to the public internet.
