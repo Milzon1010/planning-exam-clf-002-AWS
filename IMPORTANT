@@ -1,0 +1,221 @@
+AWS Services Summary with Characteristics
+
+🌐 1. Compute Services
+
+Amazon EC2 (Elastic Compute Cloud)
+Function: Virtual servers for running applications.
+Characteristics: Scalable, customizable instance types, supports Windows/Linux.
+
+AWS Lambda
+Function: Run code without managing servers (serverless).
+Characteristics: Event-driven, scalable automatically, pay-per-request.
+
+Amazon ECS (Elastic Container Service)
+Function: Manage Docker containers.
+Characteristics: Supports Fargate (serverless) and EC2 (manual management).
+
+Amazon EKS (Elastic Kubernetes Service)
+Function: Managed Kubernetes service.
+Characteristics: Simplifies Kubernetes management, supports hybrid clusters.
+
+AWS Elastic Beanstalk
+Function: Auto-manage deployments (PaaS).
+Characteristics: Fast deployment, customizable environments.
+
+📦 2. Storage Services
+
+Amazon S3 (Simple Storage Service)
+Function: Object storage for files and data.
+Characteristics: Scalable, secure, multiple storage classes.
+
+Amazon EBS (Elastic Block Store)
+Function: Block storage for EC2 instances.
+Characteristics: Persistent, customizable performance, encrypted.
+
+Amazon EFS (Elastic File System)
+Function: Scalable file storage for Linux workloads.
+Characteristics: Auto-scaling, shared access, NFS protocol.
+
+AWS Backup
+Function: Centralized backup management.
+Characteristics: Automated, multi-service support.
+
+🗄️ 3. Database Services
+
+Amazon RDS (Relational Database Service)
+Function: Managed relational databases (SQL).
+Characteristics: Automated backups, high availability (Multi-AZ).
+
+Amazon DynamoDB
+Function: Fully managed NoSQL database.
+Characteristics: Low-latency, scalable, serverless.
+
+Amazon Aurora
+Function: High-performance relational database (MySQL/PostgreSQL).
+Characteristics: Auto-scaling, global database support.
+
+Amazon Redshift
+Function: Data warehousing and analytics.
+Characteristics: Massively parallel processing, scalable, fast query performance.
+
+🚀 4. Networking and Content Delivery
+
+Amazon VPC (Virtual Private Cloud)
+Function: Private network for AWS resources.
+Characteristics: Customizable, secure, supports subnets and gateways.
+
+AWS Direct Connect
+Function: Dedicated private connection to AWS.
+Characteristics: Low-latency, secure, high-bandwidth.
+
+Amazon Route 53
+Function: Scalable DNS service.
+Characteristics: Fast, global, supports health checks.
+reroute traffic to your secondary EC2 instances in another region during disaster recovery
+
+AWS Global Accelerator
+Function: Fast global application delivery.
+Characteristics: Anycast IP, automatic failover, low-latency.
+
+Amazon CloudFront
+Function: Content Delivery Network (CDN).
+Characteristics: Fast, secure, supports HTTPS.
+
+AWS PrivateLink
+Function: Securely access services without exposing them to the public internet.
+Characteristics: Private connectivity, secure, scalable.
+
+🔒 5. Security and Identity
+
+AWS IAM (Identity and Access Management)
+Function: Control access to AWS resources.
+Characteristics: User roles, fine-grained permissions, multi-factor authentication.
+
+AWS KMS (Key Management Service)
+Function: Manage encryption keys.
+Characteristics: Secure, integrated with AWS services, compliance-ready.
+
+AWS WAF (Web Application Firewall)
+Function: Protects web applications from attacks.
+Characteristics: Custom rules, DDoS protection, real-time monitoring.
+
+Amazon GuardDuty
+Function: Intelligent threat detection.
+Characteristics: AI-powered, automated alerts, multi-account support.
+
+AWS Shield
+Function: DDoS protection.
+Characteristics: Auto-mitigation, supports CloudFront, Route 53.
+
+AWS Firewall Manager
+Function: Centralized management of security rules across AWS resources.
+Characteristics : 
+  Centralized Management : Allows you to configure and manage firewall rules across multiple accounts and resources from a single place.
+  AWS WAF Integration: Works with AWS WAF (Web Application Firewall) to protect web applications from common web exploits like SQL injection, cross-site scripting (XSS), etc.
+  Security Group Management: Enforces security group rules consistently across AWS resources, including EC2 instances and other services that use security groups.
+  Automated Security Policies: Automates the deployment and enforcement of security rules, ensuring consistency in security posture across accounts.
+  Protection for Amazon CloudFront, ALB, and AWS AppSync: AWS Firewall Manager can protect content delivered via Amazon CloudFront and applications running behind Application Load   Balancers (ALBs) or AWS AppSync.
+
+
+📊 6. Analytics Services
+
+Amazon Athena
+Function: Serverless query service for data in S3.
+Characteristics: Pay-per-query, scalable, SQL-compatible.
+
+Amazon EMR (Elastic MapReduce)
+Function: Managed big data processing.
+Characteristics: Supports Hadoop, Spark, scalable clusters.
+
+AWS Glue
+Function: Managed ETL (Extract, Transform, Load) service.
+Characteristics: Serverless, scalable, integrated with data lakes.
+
+Amazon QuickSight
+Function: Business intelligence (BI) service.
+Characteristics: Interactive dashboards, scalable, pay-per-session.
+
+🤖 7. Machine Learning Services
+
+Amazon SageMaker
+Function: End-to-end ML model building and deployment.
+Characteristics: Scalable, integrated with other AWS services.
+
+Amazon Rekognition
+Function: Image and video analysis.
+Characteristics: AI-powered, real-time detection, scalable.
+
+Amazon Comprehend
+Function: Natural language processing (NLP).
+Characteristics: Text analysis, sentiment detection, language support.
+
+Amazon Translate
+Function: Real-time language translation.
+Characteristics: Scalable, multilingual, real-time
+
+🗣️ 8. AI/ML and Voice Services
+
+Amazon Polly
+Function: Text-to-speech service.
+Characteristics: Natural-sounding voices, multi-language support.
+
+Amazon Transcribe
+Function: Speech-to-text service.
+Characteristics: Real-time transcription, multi-language support.
+
+Amazon Translate
+Function: Real-time language translation.
+Characteristics: Scalable, multilingual, real-time.
+
+Amazon Lex
+Function: Build conversational interfaces (chatbots).
+Characteristics: Natural language understanding, integrated with Lambda.
+
+Amazon Alexa
+Function: Voice-enabled assistant platform.
+Characteristics: Multi-device support, skill development.
+
+📄 9. Document Processing Services
+
+Amazon Textract
+Function: Extract text and data from scanned documents.
+Characteristics: AI-powered, automatic table/field detection.
+
+Amazon Comprehend
+Function: Natural language processing (NLP).
+Characteristics: Text analysis, sentiment detection, language support.
+
+Amazon WorkDocs
+Function: Secure document storage and sharing.
+Characteristics: Versioning, collaborative editing, secure.
+
+⚙️ 10. Monitoring and Industrial Services
+
+Amazon Monitron
+Function: Predictive maintenance for industrial equipment.
+Characteristics: Machine learning-powered, sensor-based.
+
+📩 11. Messaging and Notifications
+Amazon SQS (Simple Queue Service): Message queue for decoupling applications.
+Amazon SNS (Simple Notification Service): Push notifications and alerts.
+Amazon SES (Simple Email Service): Bulk email sending.
+
+💼 12. Migration and Transfer
+AWS DMS (Database Migration Service): Migrate databases to AWS.
+AWS Snowball: Physical device to transfer large data volumes.
+AWS Migration Hub: Centralized migration tracking.
+
+⚡ 13. Edge Computing and IoT
+AWS IoT Core: Connect IoT devices to the cloud.
+AWS Wavelength: Low-latency applications at the network edge.5G networks
+AWS Greengrass: Run local compute and data processing on IoT devices.
+
+🚦 14. Hybrid Cloud Services
+AWS Outposts: Extend AWS infrastructure to your on-premises data center.
+Amazon ECS Anywhere: Run containerized applications on any infrastructure.
+
+AWS IoT SiteWise
+Function: Collect, organize, and analyze industrial data.
+Characteristics: Scalable, real-time monitoring, data visualization.
+
+
