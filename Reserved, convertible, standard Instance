@@ -19,6 +19,7 @@ Reserved Instances are a billing discount applied to EC2 (and some other service
     Lower discount (up to 54%)
     Term: 1-year or 3-year
     Can exchange for different instance types, OS, or tenancy
+    Has the capability to change the attributes of the RI as long as the exchange results in the creation of Reserved Instances of equal or greater value
     Great for long-term workloads with changing needs
 
 💰 Payment Options
