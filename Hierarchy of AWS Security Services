@@ -1,0 +1,28 @@
+AWS Security Hub is not the highest security service in AWS, but rather a centralized security management and monitoring service.
+
+Hierarchy of AWS Security Services:
+  Core Security Services (Basic and Broad Protection):
+    IAM (Identity and Access Management): Manages user access and permissions.
+    VPC Security (Security Groups, NACLs): Network security.
+    Encryption (KMS, ACM): Data encryption at rest and in transit.
+  Monitoring and Threat Detection Services:
+    Amazon GuardDuty: Threat detection using machine learning.
+    Amazon Macie: Sensitive data discovery and classification in S3.
+    Amazon Detective: Analyzes and investigates security incidents.
+    AWS CloudTrail: API activity tracking for auditing.
+  Compliance and Policy Management Services:
+    AWS Security Hub: Centralized security monitoring and compliance checks.
+    AWS Config: Monitors resource configurations and compliance.
+    AWS Audit Manager: Automates evidence collection for audits.
+    AWS Artifact: Provides access to AWS compliance reports.
+  Application Protection Services:
+    AWS WAF (Web Application Firewall): Protects web applications from common attacks.
+    AWS Shield: DDoS protection for applications.
+    AWS Firewall Manager: Centralized firewall policy management.
+  Incident Response and Automation Services:
+    AWS Systems Manager Incident Manager: Automated incident management.
+    AWS Lambda: Automates security response actions.
+    EventBridge: Automates actions based on security events.
+
+So, What is AWS Security Hub's Role?
+AWS Security Hub is your "Security Control Tower" — a central place to collect, analyze, and manage security findings from various other AWS security services.
