@@ -1,0 +1,40 @@
+Multipart upload allows you to upload a single object as a set of parts. Each part is a contiguous portion of the object’s data. You can upload these object parts independently and in any order. If transmission of any part fails, you can retransmit that part without affecting other parts. After all parts of your object are uploaded, Amazon S3 assembles these parts and creates the object. In general, when your object size reaches 100 MB, you should consider using multipart uploads instead of uploading the object in a single operation.
+
+in simple meaning : Multipart Upload is an S3 feature that allows you to upload large files in smaller, independent parts (chunks), which are then automatically assembled by S3 into a single object after all parts are uploaded.
+
+
+Using multipart upload provides the following advantages:
+  – Improved throughput – You can upload parts in parallel to improve throughput.
+  – Quick recovery from any network issues – Smaller part size minimizes the impact of restarting a failed upload due to a network error.
+  – Pause and resume object uploads – You can upload object parts over time. Once you initiate a multipart upload there is no expiry; you must explicitly complete or abort the multipart upload.
+  – Begin an upload before you know the final object size – You can upload an object as you are creating it.
+
+How Multipart Upload Works:
+  Initiate Multipart Upload: A request is sent to S3 to start a multipart upload.
+  Upload Parts:
+    The file is divided into smaller parts (minimum size of 5 MB per part, except the last part).
+    Each part is uploaded independently and in parallel.
+  Complete Multipart Upload:
+    After all parts are uploaded, a final request is sent to assemble the parts into a single object.
+  Abort (Optional):
+    If the upload fails or is no longer needed, it can be aborted.
+
+Why Use Multipart Upload?
+  Faster Uploads:
+    Parts can be uploaded in parallel, speeding up the process.
+    Suitable for large files (e.g., videos, backups, large datasets).
+  Resilient to Failures:
+    If an upload fails, you only need to re-upload the failed part.
+    You do not need to restart the entire upload.
+  Efficient Bandwidth Usage:
+    Upload parts are independently managed, optimizing network use.
+  Large File Support:
+    Required for uploading files larger than 5 GB.
+    Supports file sizes up to 5 TB.
+
+Example Use Case:
+  You want to upload a 10 GB video file to an S3 bucket:
+  Instead of uploading the entire file at once, it is divided into 10 parts (each 1 GB).
+  These parts are uploaded in parallel, making the process faster.
+  If one part fails, only that part needs to be re-uploaded.
+
