@@ -200,6 +200,7 @@ Characteristics: Machine learning-powered, sensor-based.
 
 📩 11. Messaging and Notifications
 Amazon SQS (Simple Queue Service): Message queue for decoupling applications.
+  allows you to send, store, and receive messages between software components at any volume, without losing messages or   requiring other services to be available
 Amazon SNS (Simple Notification Service): Push notifications and alerts.
 Amazon SES (Simple Email Service): Bulk email sending.
 
